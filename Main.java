@@ -26,7 +26,16 @@ public class Main{
  
             n = 20;
             n = 251;
-            int result = math.countTrailingZero(n);
+//            int result = math.countTrailingZero(n);
+ //           System.out.println(result);
+ //
+
+            int a = 2,b=4;
+                a = 100;
+                b=200;
+                a = 7;
+                b = 13;
+            int result = math.gcd(a,b);
             System.out.println(result);
 
     }

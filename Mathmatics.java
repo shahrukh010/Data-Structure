@@ -65,4 +65,21 @@ public class  Mathmatics {
        }
         return result;
     }
+
+
+    public int gcd(int a, int b){
+
+        int minValue = Math.min(a,b);
+        int n = 1;
+        int result = 0;
+
+        while(n <=minValue){
+
+            if(a % n == 0 && b % n == 0)
+                result = n;
+            n++;
+        }
+
+        return result;
+    }
 }
