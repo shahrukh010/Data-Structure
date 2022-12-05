@@ -73,13 +73,28 @@ public class  Mathmatics {
         int n = 1;
         int result = 0;
 
+        //time is depend on MinValue
+       
+        
+        /*
         while(n <=minValue){
 
             if(a % n == 0 && b % n == 0)
                 result = n;
             n++;
         }
+        */
 
+
+        //more optimize solution
+       
+        while(minValue > 0){
+
+            if(a % minValue ==0 && b % minValue == 0)
+                return minValue;
+            minValue--;
+        }
+        
         return result;
     }
 }
