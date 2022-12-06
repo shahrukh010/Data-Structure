@@ -192,4 +192,26 @@ public class  Mathmatics {
     }
 
 
+    public boolean[] printAllPrime(int n){
+
+
+        boolean[]  prime = new boolean[n];
+
+        for(int index = 2; index * index <=n; index++){
+
+            if(isPrime(index)){
+
+
+                for(int j = 2*index ; j<n; j = j+index){
+
+                    prime[j] = true;
+                }
+
+            }
+        }
+
+        return prime;
+    }
+
+
 }

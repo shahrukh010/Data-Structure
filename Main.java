@@ -73,8 +73,15 @@ public class Main{
   //          number = 15;
  //           number = 100;
             number = 7;
-            java.util.List result = math.allDivisor(number);
-            System.out.println(result);
+//            java.util.List result = math.allDivisor(number);
+ //           System.out.println(result);
+
+            number = 16;
+            boolean result[] = math.printAllPrime(number);
+
+            for(int index = 2; index < result.length; index ++)
+                if(!result[index])
+                    System.out.print(index+" ");
 
 
     }
