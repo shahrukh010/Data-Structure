@@ -50,6 +50,7 @@ public class Main{
             int number=13;
             number = 12;
             number = 101;
+            number = 25;
 
             boolean result = math.isPrime(number);
             System.out.println(result);

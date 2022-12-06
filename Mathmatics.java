@@ -118,9 +118,17 @@ public class  Mathmatics {
         if(n==1)
             return false;
 
+        /*
+           //O(n)
         for(int index = 2; index <n; index++){
 
             if(n %index==0)
+                return false;
+        }*/
+
+        for(int index = 2; index * index <= n; index++){
+
+            if(n % index==0)
                 return false;
         }
         return true;
