@@ -64,9 +64,17 @@ public class Main{
             number = 315;
             number = 13;
             number = 84;
+            number = 450;
             
-          java.util.List result = math.primeFactor(number);
-          System.out.println(result);
+//          java.util.List result = math.primeFactor(number);
+ //         System.out.println(result);
+ 
+
+  //          number = 15;
+ //           number = 100;
+            number = 7;
+            java.util.List result = math.allDivisor(number);
+            System.out.println(result);
 
 
     }

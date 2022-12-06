@@ -152,7 +152,7 @@ public class  Mathmatics {
 
         java.util.List result = new java.util.ArrayList<>();
 
-        for(int index = 2; index * index <=n; index++){
+        for(int index = 2; index * index <= n; index++){
 
             if(isPrime(index)){
 
@@ -164,6 +164,30 @@ public class  Mathmatics {
                 }
             }
         }
+        return result;
+    }
+
+
+
+    public java.util.List allDivisor(int n){
+
+        java.util.List result = new java.util.ArrayList();
+
+        int index;
+        for(index = 1; index * index < n; index++ ){
+
+            if(n % index == 0){
+                result.add(index);
+            }
+        }
+
+        for(; index >=1; index--){
+
+            if(n % index == 0){
+                result.add(n/index);
+            }
+        }
+
         return result;
     }
 
