@@ -126,12 +126,45 @@ public class  Mathmatics {
                 return false;
         }*/
 
+        //o(sqrootn)
+        /*
         for(int index = 2; index * index <= n; index++){
 
             if(n % index==0)
                 return false;
+        }*/
+
+        if(n == 2 || n == 3)
+            return true;
+
+        if(n % 2 == 0 || n % 3 == 0)//just skiping which is divisable by 2 or 3 because of these are not prime number
+            return false;
+
+        for( int index = 5 ; index * index <= n; index = index + 6 ){
+
+            if(n % index == 0 || (n %(index+2) == 0 ))
+                return false;
         }
         return true;
+    }
+
+    public java.util.List primeFactor(int n){
+
+        java.util.List result = new java.util.ArrayList<>();
+
+        for(int index = 2; index * index <=n; index++){
+
+            if(isPrime(index)){
+
+                int tmp = index;
+                while(n % tmp == 0){
+
+                    result.add(index);
+                    tmp = tmp*tmp;
+                }
+            }
+        }
+        return result;
     }
 
 

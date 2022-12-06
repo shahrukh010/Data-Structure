@@ -51,9 +51,23 @@ public class Main{
             number = 12;
             number = 101;
             number = 25;
+            number = 65;
+            number = 7;
+            number = 121;
+            number = 1031;
 
-            boolean result = math.isPrime(number);
-            System.out.println(result);
+            //boolean result = math.isPrime(number);
+            //System.out.println(result);
+            //
+            
+            number = 12;
+            number = 315;
+            number = 13;
+            number = 84;
+            
+          java.util.List result = math.primeFactor(number);
+          System.out.println(result);
+
 
     }
 }
