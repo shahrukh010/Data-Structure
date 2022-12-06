@@ -33,9 +33,25 @@ public class Main{
             int a = 2,b=4;
                 a = 100;
                 b=200;
-                a = 7;
-                b = 13;
-            int result = math.gcd(a,b);
+//                a = 7;
+ //               b = 13;
+//            int result = math.gcd(a,b);
+ //           System.out.println(result);
+ //
+
+            a = 4;
+            b = 6;
+            a = 12;
+            b = 15;
+
+//            int result = math.lcm(a,b);
+ //           System.out.println(result);
+ //
+            int number=13;
+            number = 12;
+            number = 101;
+
+            boolean result = math.isPrime(number);
             System.out.println(result);
 
     }

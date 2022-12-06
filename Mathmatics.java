@@ -97,4 +97,34 @@ public class  Mathmatics {
         
         return result;
     }
+
+
+    public int lcm(int a, int b){
+
+        int MaxValue = Math.max(a, b);
+
+        while(true){
+
+            if(MaxValue % a == 0 && MaxValue % b == 0){
+                return MaxValue;
+            }
+            MaxValue++;
+        }
+    }
+
+
+    public boolean isPrime(int n){
+
+        if(n==1)
+            return false;
+
+        for(int index = 2; index <n; index++){
+
+            if(n %index==0)
+                return false;
+        }
+        return true;
+    }
+
+
 }
