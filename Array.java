@@ -34,5 +34,28 @@ public class Array{
         }
         return res;
     }
+    
+    //optimize soln of second largest element
+    public int getSecondLargest(int[]input){
+
+        int res = -1;
+
+        int lg = 0;
+        for(int index = 1; index < input.length; index++){
+
+            if(input[lg] < input[index]){
+                res = lg;
+                lg = index;
+            }
+            else if(input[lg] !=input[index]){
+
+                if(res == -1 || input[index] > input[res]){
+                    res = index;
+                }
+        }
+
+    }
+    return res;
+    }
 }
 

@@ -89,11 +89,12 @@ public class Main{
 
 
             Array array = new Array();
-            //int[] input = {5,20,12,20,10};
-              int[] input = {10,10,10,10,10};
+            int[] input = {5,20,12,20,10};
+//              int[] input = {10,10,10,10,10};
 
             int result = array.getLargest(input);
-            result = array.secondLargestIndex(input);
+           // result = array.secondLargestIndex(input);
+             result = array.getSecondLargest(input);
             System.out.println(result);
     }
 }
