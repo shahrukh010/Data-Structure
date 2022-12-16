@@ -98,9 +98,13 @@ public class Main{
             //
 //            int[] nums = {10,10,12,12,13};
   //          boolean result = array.isArraySorted(nums);
-            int[] input = {1,2,3,4,5,0};
-            int[]result = array.reverseArray(input);
+//            int[] input = {1,2,3,4,5,0};
+ //           int[]result = array.reverseArray(input);
 
+//            int[] nums = {10,20,20,30,30,30};
+            int[] nums = {10,10,20,30,30,40};
+
+            int[]result = array.removeDuplicateFromSortedArray(nums);
             System.out.println(java.util.Arrays.toString(result));
     }
 }

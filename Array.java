@@ -90,6 +90,26 @@ public class Array{
    }
 
 
+   public int[] removeDuplicateFromSortedArray(int[]input){
+
+
+       int j = 0;
+
+       for(int index = 1; index < input.length; index++){
+
+           if(input[j] !=input[index]){
+               input[j+1] = input[index];
+               j++;
+           }
+       }
+
+       return input;
+
+   }
+
+
+
+
 
 
 
