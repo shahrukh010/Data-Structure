@@ -92,9 +92,12 @@ public class Main{
             int[] input = {5,20,12,20,10};
 //              int[] input = {10,10,10,10,10};
 
-            int result = array.getLargest(input);
+//            int result = array.getLargest(input);
            // result = array.secondLargestIndex(input);
-             result = array.getSecondLargest(input);
+            // result = array.getSecondLargest(input);
+            //
+            int[] nums = {10,10,12,12,13};
+            boolean result = array.isArraySorted(nums);
             System.out.println(result);
     }
 }

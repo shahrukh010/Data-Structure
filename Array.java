@@ -52,10 +52,29 @@ public class Array{
                 if(res == -1 || input[index] > input[res]){
                     res = index;
                 }
-        }
+            }
 
-    }
-    return res;
-    }
+      }
+         return res;
+   }
+
+
+   public boolean isArraySorted(int[]input){
+
+       for(int index = 1; index < input.length; index++){
+
+           if(input[index] < input[index-1])
+               return false;
+       }
+       return true;
+   }
+
+
+
+
+
+
+
+
 }
 
