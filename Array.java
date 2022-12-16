@@ -124,6 +124,29 @@ public class Array{
 
 
 
+   public int[] rotateByD(int d, int[] input){
+
+       for(int index = 0; index < d; index++){
+
+           rotate(0, input);
+       }
+       return input;
+   }
+
+   private void rotate(int d, int[]input){
+
+       int tmp = input[0];
+
+       for(int index = 0; index < input.length-1; index++){
+
+           input[index] = input[index+1];
+       }
+       input[input.length-1] = tmp;
+   }
+
+
+
+
 
 
 

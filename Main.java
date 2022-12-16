@@ -106,8 +106,10 @@ public class Main{
 
 //            int[]result = array.removeDuplicateFromSortedArray(nums);
 //            int[] nums = {8,5,0,10,0,20};
-            int[] nums = {0,8,5,0,10,0,20};
-            int[]result = array.moveZero(nums);
+//            int[] nums = {0,8,5,0,10,0,20};
+//           int[]result = array.moveZero(nums);
+            int[] nums = {1,2,3,4,5};
+            int[] result = array.rotateByD(3,nums);
 
             System.out.println(java.util.Arrays.toString(result));
     }
