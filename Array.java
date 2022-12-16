@@ -1,4 +1,5 @@
 package com.code.main.array;
+import java.util.*;
 
 public class Array{
 
@@ -142,6 +143,24 @@ public class Array{
            input[index] = input[index+1];
        }
        input[input.length-1] = tmp;
+   }
+
+
+   public int[] getLeaderElement(int[]input){
+
+       int currentLeader = input[input.length-1];
+       List<Integer> res = new ArrayList<>();
+       res.add(currentLeader);
+
+       for(int index = input.length-2; index >=0; index--){
+
+           if(input[index] >currentLeader){
+               currentLeader = input[index];
+               res.add(currentLeader);
+           }
+       }
+       return res.stream().mapToInt(i->i).toArray();
+           
    }
 
 
