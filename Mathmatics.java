@@ -1,4 +1,4 @@
-package com.code.math;
+package com.code.main.math;
 public class  Mathmatics {
 
 

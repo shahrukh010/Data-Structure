@@ -1,4 +1,5 @@
-import com.code.math.Mathmatics;
+import com.code.main.math.Mathmatics;
+import com.code.main.array.Array;
 public class Main{
 
     public static void main(String...strings){
@@ -76,6 +77,7 @@ public class Main{
 //            java.util.List result = math.allDivisor(number);
  //           System.out.println(result);
 
+            /*
             number = 16;
             boolean result[] = math.printAllPrime(number);
 
@@ -83,6 +85,15 @@ public class Main{
                 if(!result[index])
                     System.out.print(index+" ");
 
+            */
 
+
+            Array array = new Array();
+            //int[] input = {5,20,12,20,10};
+              int[] input = {10,10,10,10,10};
+
+            int result = array.getLargest(input);
+            result = array.secondLargestIndex(input);
+            System.out.println(result);
     }
 }
