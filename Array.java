@@ -108,6 +108,21 @@ public class Array{
    }
 
 
+   public int[] moveZero(int[]input){
+
+       int r = 0;
+
+       for(int index = 0; index < input.length; index++){
+
+           if(input[index] !=0){
+               swap(input,r,index);
+               r++;
+           }
+       }
+       return input;
+   }
+
+
 
 
 

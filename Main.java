@@ -102,9 +102,13 @@ public class Main{
  //           int[]result = array.reverseArray(input);
 
 //            int[] nums = {10,20,20,30,30,30};
-            int[] nums = {10,10,20,30,30,40};
+ //           int[] nums = {10,10,20,30,30,40};
 
-            int[]result = array.removeDuplicateFromSortedArray(nums);
+//            int[]result = array.removeDuplicateFromSortedArray(nums);
+//            int[] nums = {8,5,0,10,0,20};
+            int[] nums = {0,8,5,0,10,0,20};
+            int[]result = array.moveZero(nums);
+
             System.out.println(java.util.Arrays.toString(result));
     }
 }
