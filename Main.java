@@ -89,15 +89,18 @@ public class Main{
 
 
             Array array = new Array();
-            int[] input = {5,20,12,20,10};
+ //           int[] input = {5,20,12,20,10};
 //              int[] input = {10,10,10,10,10};
 
 //            int result = array.getLargest(input);
            // result = array.secondLargestIndex(input);
             // result = array.getSecondLargest(input);
             //
-            int[] nums = {10,10,12,12,13};
-            boolean result = array.isArraySorted(nums);
-            System.out.println(result);
+//            int[] nums = {10,10,12,12,13};
+  //          boolean result = array.isArraySorted(nums);
+            int[] input = {1,2,3,4,5,0};
+            int[]result = array.reverseArray(input);
+
+            System.out.println(java.util.Arrays.toString(result));
     }
 }

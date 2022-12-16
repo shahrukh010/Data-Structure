@@ -69,6 +69,25 @@ public class Array{
        return true;
    }
 
+   public int[] reverseArray(int[]input){
+
+       int start = 0; 
+       int end = input.length-1;
+
+       while(start < end){
+
+           swap(input,start++,end--);
+       }
+
+       return input;
+   }
+
+   private void swap(int[]nums,int i,int j){
+
+       int tmp = nums[i];
+       nums[i] = nums[j];
+       nums[j] = tmp;
+   }
 
 
 
