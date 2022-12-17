@@ -114,11 +114,16 @@ public class Main{
  //           int[] result = array.getLeaderElement(nums);
 
             //int[] nums = {2,3,10,6,4,8,1};
-            int[] nums = {7,9,5,6,3,2};
-             int result = array.maxDiff(nums);
-             result = array.maxDifference(nums);
+//            int[] nums = {7,9,5,6,3,2};
+ //            int result = array.maxDiff(nums);
+  //           result = array.maxDifference(nums);
                           
-             System.out.println(result);
+            //int[] nums = {10,10,10,25,30,30,40};
+            //int[] nums = {10,10,10,10};
+            //int[] nums = {10,20,30};
+            int[] nums = {10,10,10,30,30,40};
+                    array.frequence(nums);
+             System.out.println(nums);
     //        System.out.println(java.util.Arrays.toString(result));
     }
 }
