@@ -159,8 +159,37 @@ public class Array{
                res.add(currentLeader);
            }
        }
-       return res.stream().mapToInt(i->i).toArray();
+       return res.stream().mapToInt(i->i).toArray();//convert list to primitive int[] array
            
+   }
+
+   public int maxDiff(int[]input){
+
+       int res = input[1] - input[0];
+
+       for(int index = 0; index < input.length; index++){
+
+           for(int j = index + 1; j < input.length; j++){
+
+               res = Math.max(res,input[j] - input[index]);
+           }
+       }
+       return res;
+   }
+
+
+   //optimze
+   public int maxDifference(int[]input){
+
+       int res = input[1] - input[0];
+       int minValue = input[0];
+
+       for(int index = 1; index  < input.length; index++){
+
+            res = Math.max(res,input[index] - minValue);
+            minValue = Math.min(minValue,input[index]);
+       }
+       return res;
    }
 
 

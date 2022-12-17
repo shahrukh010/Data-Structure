@@ -110,9 +110,15 @@ public class Main{
 //           int[]result = array.moveZero(nums);
 //            int[] nums = {1,2,3,4,5};
  //           int[] result = array.rotateByD(3,nums);
-            int[] nums = {7,10,4,3,6,5,2};
-            int[] result = array.getLeaderElement(nums);
+//            int[] nums = {7,10,4,3,6,5,2};
+ //           int[] result = array.getLeaderElement(nums);
 
-            System.out.println(java.util.Arrays.toString(result));
+            //int[] nums = {2,3,10,6,4,8,1};
+            int[] nums = {7,9,5,6,3,2};
+             int result = array.maxDiff(nums);
+             result = array.maxDifference(nums);
+                          
+             System.out.println(result);
+    //        System.out.println(java.util.Arrays.toString(result));
     }
 }
