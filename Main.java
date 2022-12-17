@@ -127,8 +127,12 @@ public class Main{
     //        System.out.println(java.util.Arrays.toString(result));
 
             //int nums[] = {1,5,3,1,2,8};
-            int nums[] = {1,5,3,8,12};
-            int result = array.maxProfit(nums);
+//            int nums[] = {1,5,3,8,12};
+ //           int result = array.maxProfit(nums);
+
+//            int nums[] = {3,0,1,2,5};
+            int nums[] = {2,0,2};
+            int result = array.trapingWater(nums);
             System.out.println(result);
     }
 }

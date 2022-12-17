@@ -224,6 +224,30 @@ public class Array{
        return profit;
    }
 
+   public int trapingWater(int[]input){
+
+       int totalWaterContain = 0;
+       for(int index = 1; index < input.length-1; index++){
+
+           int lmax = input[index];
+           //find left max
+           for(int j = 0; j<=index;j++)
+               if(input[j] > lmax)
+                   lmax = input[j];
+
+
+           int rmax = input[index+1];
+           //find right max
+           for(int j = index+1; j < input.length;j++)
+               if(input[j] > rmax)
+                   rmax = input[j];
+
+           totalWaterContain += ((Math.min(lmax,rmax))-input[index]);
+
+       }
+       return totalWaterContain;
+   }
+
 
 
 
