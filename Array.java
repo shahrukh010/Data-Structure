@@ -213,6 +213,18 @@ public class Array{
    }
 
 
+   public int maxProfit(int[]input){
+
+       int profit = 0;
+       for(int index = 1; index < input.length; index++){
+
+           if(input[index] > input[index-1])//if stock price is less then buy then keep go and if stock price is > then buy then shell and make profit 
+               profit +=input[index] - input[index-1];
+       }
+       return profit;
+   }
+
+
 
 
 

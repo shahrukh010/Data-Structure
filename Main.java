@@ -121,9 +121,14 @@ public class Main{
             //int[] nums = {10,10,10,25,30,30,40};
             //int[] nums = {10,10,10,10};
             //int[] nums = {10,20,30};
-            int[] nums = {10,10,10,30,30,40};
-                    array.frequence(nums);
-             System.out.println(nums);
+//            int[] nums = {10,10,10,30,30,40};
+ //                   array.frequence(nums);
+  //           System.out.println(nums);
     //        System.out.println(java.util.Arrays.toString(result));
+
+            //int nums[] = {1,5,3,1,2,8};
+            int nums[] = {1,5,3,8,12};
+            int result = array.maxProfit(nums);
+            System.out.println(result);
     }
 }
