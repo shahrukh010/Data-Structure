@@ -268,7 +268,7 @@ public class Array{
 
    public int maxSumSubArray(int[]input){
 
-       int result = Integer.MIN_VALUE;
+       int result = input[0];
 
        for(int index = 0; index < input.length;index++){
 
@@ -277,10 +277,25 @@ public class Array{
            for(int j = index; j < input.length; j++){
 
                currentSum +=input[j];//because of single element also can be greatest like(-6,-1,-8}
+              result  = Math.max(currentSum,result);
            }
         }
                 return result;
      }
+
+    public int maxSumFromSubArray(int[]input){
+
+        int currentMax = input[0];
+        int max_so_far = input[0];
+
+        for(int index = 1; index < input.length; index++){
+
+            currentMax = Math.max(currentMax + input[index],input[index]);
+            max_so_far = Math.max(currentMax,max_so_far);
+        }
+        return max_so_far;
+    }
+
 
 
 

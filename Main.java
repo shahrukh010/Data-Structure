@@ -139,7 +139,8 @@ public class Main{
             //int[] nums = {2,3,-8,7,-1,2,3};
             //int[] nums = {5,8,3};
             int[] nums = {-6,-1,-8};
-            int result = array.maxSumSubArray(nums);
+            //int result = array.maxSumSubArray(nums);
+            int result = array.maxSumFromSubArray(nums);
             System.out.println(result);
     }
 }
