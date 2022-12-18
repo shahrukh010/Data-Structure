@@ -131,8 +131,10 @@ public class Main{
  //           int result = array.maxProfit(nums);
 
 //            int nums[] = {3,0,1,2,5};
-            int nums[] = {2,0,2};
-            int result = array.trapingWater(nums);
+//            int nums[] = {3,0,1,2,5};
+ //           int result = array.trapingWater(nums);
+            int[] input = {0,1,1,0,1,0,1,0,1,0,1,};
+            int result = array.maxConsecutiveOnce(input);
             System.out.println(result);
     }
 }
