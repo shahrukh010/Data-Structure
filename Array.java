@@ -266,5 +266,30 @@ public class Array{
        return result;
    }
 
+   public int maxSumSubArray(int[]input){
+
+       int result = Integer.MIN_VALUE;
+
+       for(int index = 0; index < input.length;index++){
+
+           int currentSum = 0;
+
+           for(int j = index; j < input.length; j++){
+
+               currentSum +=input[j];//because of single element also can be greatest like(-6,-1,-8}
+           }
+        }
+                return result;
+     }
+
+
+
+
+
+
+
+
+
+
 }
 

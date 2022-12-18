@@ -133,8 +133,13 @@ public class Main{
 //            int nums[] = {3,0,1,2,5};
 //            int nums[] = {3,0,1,2,5};
  //           int result = array.trapingWater(nums);
-            int[] input = {0,1,1,0,1,0,1,0,1,0,1,};
-            int result = array.maxConsecutiveOnce(input);
+//            int[] input = {0,1,1,0,1,0,1,0,1,0,1,};
+ //           int result = array.maxConsecutiveOnce(input);
+
+            //int[] nums = {2,3,-8,7,-1,2,3};
+            //int[] nums = {5,8,3};
+            int[] nums = {-6,-1,-8};
+            int result = array.maxSumSubArray(nums);
             System.out.println(result);
     }
 }
