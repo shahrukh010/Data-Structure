@@ -297,6 +297,23 @@ public class Array{
     }
 
 
+    public int longestEvenOdd(int[]input){
+
+        int result = 1;
+
+        for(int index = 1; index < input.length; index++){
+
+            if(input[index]%2==0 && input[index-1] %2 !=0 ||
+               input[index]%2 !=0 && input[index-1] %2 ==0)
+                result++;
+            else
+                result = 1;
+        }
+
+        return result;
+    }
+
+
 
 
 

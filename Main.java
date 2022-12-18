@@ -138,9 +138,13 @@ public class Main{
 
             //int[] nums = {2,3,-8,7,-1,2,3};
             //int[] nums = {5,8,3};
-            int[] nums = {-6,-1,-8};
+           // int[] nums = {-6,-1,-8};
             //int result = array.maxSumSubArray(nums);
-            int result = array.maxSumFromSubArray(nums);
+
+//            int[] nums = {10,12,4,7,8};
+//            int[] nums = {10,4,8,8};
+            int[] nums = {7,10,13,14};
+            int result = array.longestEvenOdd(nums);
             System.out.println(result);
     }
 }
