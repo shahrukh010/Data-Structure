@@ -4,7 +4,7 @@ public class LinkedList{
 
     class Node{
 
-        private int data;//
+        private int data;//can be access from parent class class also.ie LinkedList 
         private Node next;
 
         public Node(int data){

@@ -313,12 +313,26 @@ public class Array{
         return result;
     }
 
+    public int maxOfCircularSubArray(int[]input){
 
+        int res = input[0];
 
+        for(int index = 0; index < input.length; index++){
 
+            int current_sum = input[index];
+            int current_max = input[index];
 
+            for(int j = 1; j <input.length; j++){
 
+               int idx = ((index+j)%input.length);
 
+               current_sum +=input[idx];
+               current_max = Math.max(current_sum,current_max);//may be single value can be maximum among all i.e current_max
+            }
+            res = Math.max(current_max,res);
+    }
+    return res;
+    }
 
 
 
