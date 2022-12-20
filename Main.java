@@ -155,10 +155,13 @@ public class Main{
             //  int[] nums = {8,7,6,8,6,6,6,6};
             //int result = array.majorityElement(nums);
 
-            int[] nums = {0,0,1,1,0,0,1,1,0};
-                array.flipGroup(nums);
+//            int[] nums = {0,0,1,1,0,0,1,1,0};
+ //               array.flipGroup(nums);
+
+            //int[] nums = {1,8,30,-5,20,7};
+               int[] nums = {5,-10,6,90,3};
+            int result = array.kthSubArraySum(nums,2);
+            System.out.println(result);
     }
-
-
 
 }

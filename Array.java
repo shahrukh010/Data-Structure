@@ -400,6 +400,25 @@ public class Array{
     }
 
 
+    public int kthSubArraySum(int[]input, int k){
+
+
+        int result = Integer.MIN_VALUE;
+
+        for(int index = 0; index + k -1 < input.length; index++){
+
+            int current_sum = 0;
+
+            for(int j = 0; j < k; j++){
+
+                current_sum += input[index+j];
+            }
+
+            result = Math.max(result,current_sum);
+        }
+
+        return result;
+    }
 
 
 }
