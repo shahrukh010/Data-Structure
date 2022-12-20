@@ -152,9 +152,11 @@ public class Main{
 
             //int[] nums = {8,3,4,8,8};
             //int[] nums = {3,7,4,7,7,5};
-              int[] nums = {8,7,6,8,6,6,6,6};
-            int result = array.majorityElement(nums);
-            System.out.println(result);
+            //  int[] nums = {8,7,6,8,6,6,6,6};
+            //int result = array.majorityElement(nums);
+
+            int[] nums = {0,0,1,1,0,0,1,1,0};
+                array.flipGroup(nums);
     }
 
 

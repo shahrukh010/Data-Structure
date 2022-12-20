@@ -377,6 +377,28 @@ public class Array{
 
     }
 
+    public void  flipGroup(int[]input){
+
+        for(int index = 1; index < input.length; index++){
+
+            if(input[index] !=input[index-1]){
+
+                if(input[index] !=input[0]){
+
+                    System.out.print("["+index+",");
+                }
+                else{
+                    System.out.print(index-1+"]");
+
+            }
+        }
+
+        if(input[input.length-1] !=input[0])
+            System.out.print(input.length-1+"]");
+        }
+        System.out.println();
+    }
+
 
 
 
