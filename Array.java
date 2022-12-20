@@ -335,6 +335,49 @@ public class Array{
     }
 
 
+    private int getCandidate(int[]input){
+
+        int count = 1;
+        int candidate = 0;
+
+        for(int index = 1; index < input.length; index++){
+
+            if(input[candidate] == input[index])
+                count++;
+            else{
+                
+                count--;
+                if(count==0){
+                    count = 1;
+                    candidate = index;
+                }
+
+            }
+        }
+        return candidate;
+
+    }
+
+    public int majorityElement(int[]input){
+
+        int candidate = getCandidate(input);
+        int count = 0;
+
+        for(int index = 0; index < input.length; index++){
+
+            if(input[candidate] == input[index]){
+                count++;
+                if(count > (input.length/2)){
+
+                    return candidate;
+                }
+            }
+        }
+        return -1;
+
+    }
+
+
 
 
 }

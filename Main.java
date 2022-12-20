@@ -146,8 +146,14 @@ public class Main{
 //            int[] nums = {7,10,13,14};
 //            int result = array.longestEvenOdd(nums);
 
-            int[] nums = {5,-2,3,4};
-            int result = array.maxOfCircularSubArray(nums);
+//            int[] nums = {5,-2,3,4};
+ //           int result = array.maxOfCircularSubArray(nums);
+  //          System.out.println(result);
+
+            //int[] nums = {8,3,4,8,8};
+            //int[] nums = {3,7,4,7,7,5};
+              int[] nums = {8,7,6,8,6,6,6,6};
+            int result = array.majorityElement(nums);
             System.out.println(result);
     }
 
