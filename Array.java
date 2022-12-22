@@ -442,6 +442,32 @@ public class Array{
         }
         return result;
     }
+    
+    public boolean subArraySumExists(int[] input,int sum){
+
+
+
+        for(int index = 0; index < input.length; index++){
+
+            int currentSum = input[index];
+
+            for(int j = index+1; j < input.length; j++){
+
+                if(currentSum == sum)
+                    return true;
+
+                currentSum +=input[j];
+
+                if(currentSum == sum)
+                    return true;
+
+                if(currentSum > sum)
+                    break;
+
+            }
+        }
+        return false;
+    }
 
 }
 

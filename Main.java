@@ -163,8 +163,14 @@ public class Main{
  //           int result = array.kthSubArraySum(nums,2);
 
 //            int input[] = {1,8,30,-5,20,7};
-               int[] input = {5,-10,6,90,3};
-            int result= array.kthSubSum(input,2);
+               //int[] input = {5,-10,6,90,3};
+//               int[] input = {1,8,30,-5,20,7};
+//            int result= array.kthSubSum(input,4);
+
+            //int[] input = {1,4,20,3,10,5};
+//            int[] input = {1,4,0,0,3,10,5};
+            int[] input = {2,4};
+            boolean result = array.subArraySumExists(input,3);
             System.out.println(result);
     }
 
