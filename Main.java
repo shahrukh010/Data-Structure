@@ -159,8 +159,12 @@ public class Main{
  //               array.flipGroup(nums);
 
             //int[] nums = {1,8,30,-5,20,7};
-               int[] nums = {5,-10,6,90,3};
-            int result = array.kthSubArraySum(nums,2);
+//               int[] nums = {5,-10,6,90,3};
+ //           int result = array.kthSubArraySum(nums,2);
+
+//            int input[] = {1,8,30,-5,20,7};
+               int[] input = {5,-10,6,90,3};
+            int result= array.kthSubSum(input,2);
             System.out.println(result);
     }
 

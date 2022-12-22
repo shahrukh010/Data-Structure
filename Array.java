@@ -421,5 +421,27 @@ public class Array{
     }
 
 
+    public int kthSubSum(int input[], int k){
+
+
+        int currentMax = 0;
+        int index = 0;
+        int result = Integer.MIN_VALUE;
+
+        for(;index < k; index++){
+
+            currentMax +=input[index];
+        }
+
+        result = currentMax;
+
+        for(int j = index; j < input.length; j++){
+
+            currentMax += input[j] - input[j - k];
+            result = Math.max(result,currentMax);
+        }
+        return result;
+    }
+
 }
 
