@@ -468,6 +468,26 @@ public class Array{
         }
         return false;
     }
+    
+    public boolean sumExists(int[]input, int sum){
 
+
+        int res = 0;
+        int currentSum  = 0;
+
+        for(int index = 0; index < input.length; index++){
+
+            currentSum +=input[index];
+
+            while(sum < currentSum){
+
+                currentSum -=input[res];
+                res++;
+            }
+            if(currentSum == sum)
+                return true;
+        }
+        return false;
+    }
 }
 
