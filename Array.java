@@ -525,5 +525,27 @@ public class Array{
         }
         return prefixSum;
     }
+    
+    public boolean equilibriumPoint(int[]input){
+
+
+        for(int index = 0; index < input.length; index++){
+
+            int leftSum = 0;
+            
+            for(int j = 0; j < index; j++)
+                leftSum +=input[j];
+
+            int rightSum = 0;
+            for(int k = index+1; k < input.length; k++)
+                    rightSum += input[k];
+
+            if(leftSum == rightSum)
+                return true;
+        }
+        return false;
+
+    }
+
 }
 
