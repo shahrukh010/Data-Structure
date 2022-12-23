@@ -494,13 +494,36 @@ public class Array{
     public int getSum(int[]input, int l, int h){
 
 
+        /*
         int res = 0;
 
+        //0(n)
         for(int index = l; index<=h; index++){
 
             res +=input[index];
         }
         return res;
+        */
+
+        int[] prefix = prefixSum(input);
+
+        if(l==0)
+            return prefix[h];
+        
+        return prefix[h] - prefix[l-1];
+    }
+
+
+    public int[] prefixSum(int[] input){
+
+        int[] prefixSum = new int[input.length];
+        prefixSum[0] = input[0];
+
+        for(int index = 1; index < input.length; index++){
+
+            prefixSum[index] = input[index] + prefixSum[index-1];
+        }
+        return prefixSum;
     }
 }
 

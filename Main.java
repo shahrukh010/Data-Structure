@@ -175,7 +175,9 @@ public class Main{
  //           boolean result = array.sumExists(input,7);
 
             int[] input = {2,8,3,9,6,5,4};
-            int result = array.getSum(input,0,2);
+            //int result = array.getSum(input,0,3);
+//            int result = array.getSum(input,3,5);
+            int result = array.getSum(input,4,6);
             System.out.println(result);
     }
 
