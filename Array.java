@@ -489,5 +489,18 @@ public class Array{
         }
         return false;
     }
+
+    
+    public int getSum(int[]input, int l, int h){
+
+
+        int res = 0;
+
+        for(int index = l; index<=h; index++){
+
+            res +=input[index];
+        }
+        return res;
+    }
 }
 

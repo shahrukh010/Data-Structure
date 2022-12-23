@@ -168,11 +168,14 @@ public class Main{
 //            int result= array.kthSubSum(input,4);
 
 //            int[] input = {1,4,20,3,10,5};
-            int[] input = {1,4,0,0,3,10,5};
+//            int[] input = {1,4,0,0,3,10,5};
 //            int[] input = {2,4};
             //boolean result = array.subArraySumExists(input,3);
 //            int[] input = {4,8,12,5};
-            boolean result = array.sumExists(input,7);
+ //           boolean result = array.sumExists(input,7);
+
+            int[] input = {2,8,3,9,6,5,4};
+            int result = array.getSum(input,0,2);
             System.out.println(result);
     }
 
