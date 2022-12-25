@@ -1,3 +1,3 @@
 git add .
-git commit -m 'working on array'
+git commit -m 'working on search'
 
