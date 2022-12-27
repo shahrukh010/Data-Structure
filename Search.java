@@ -11,7 +11,8 @@ public class Search {
 
         while(low <= high){
 
-            int mid = low +(high - low) / 2;
+            int mid = (low+high) / 2;//if we have not large set of array then we can use or where overflow situation not raise
+//            int mid = low +(high - low) / 2;//this formula for if we have largest set of array to overcome overflow
 
             if(input[mid] == target)
                 return mid;
