@@ -16,11 +16,15 @@ public class SearchMain {
 
         */
 
-        int[] input = {1,10,10,10,20,20,40};
+        //int[] input = {1,10,10,10,20,20,40};
         //int result = search.firstIndex(input,20);
         //int result = search.firstIndex(input,10);
 //        int result = search.firstIndex(input,1);
-        int result = search.firstIndex(input,40);
+//
+        //int result = search.lastIndex(input,40);
+        //int result = search.lastIndex(input,0);
+        int[] input = {5,8,8,10,10};
+        int result = search.lastIndex(input,10);
         System.out.println(result);
     }
 
