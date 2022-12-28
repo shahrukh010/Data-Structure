@@ -29,8 +29,12 @@ public class SearchMain {
 //        int result = search.ocuurences(input,100);
 
 //        int[] input = {0,0,0,0,1,1,1,1,};
-        int[] input = {0,0,0,0,1};
-        int result = search.count1sBinaryArray(input);
+    //    int[] input = {0,0,0,0,1};
+     //   int result = search.count1sBinaryArray(input);
+
+           //int result = search.squareRoot(4); 
+          // int result = search.squareRoot(15); 
+           int result = search.squareRoot(25); 
         System.out.println(result);
     }
 

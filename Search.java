@@ -95,6 +95,23 @@ public class Search {
             }
 
 
+            public int squareRoot(int n){
+
+                /*
+                int res = 0;
+                for(int index = 1; index * index <=n; index++){
+
+                    res = index;
+                }*/
+
+                int res = 1;
+                while(res*res <=n){
+                    res++;
+                }
+                return res-1;
+            }
+
+
                 
                     
             
