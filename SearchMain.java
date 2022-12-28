@@ -25,8 +25,12 @@ public class SearchMain {
         //int result = search.lastIndex(input,0);
 //        int[] input = {5,8,8,10,10};
 
-        int[] input = {10,20,20,20,30,30};
-        int result = search.ocuurences(input,100);
+//        int[] input = {10,20,20,20,30,30};
+//        int result = search.ocuurences(input,100);
+
+//        int[] input = {0,0,0,0,1,1,1,1,};
+        int[] input = {0,0,0,0,1};
+        int result = search.count1sBinaryArray(input);
         System.out.println(result);
     }
 

@@ -87,6 +87,13 @@ public class Search {
                 return firstIndex == -1 ? 0 : (lastIndex - firstIndex + 1);
             }
 
+            public int count1sBinaryArray(int[]input){
+
+                int firstIndex = firstIndex(input,1);
+
+                return (input.length - firstIndex);
+            }
+
 
                 
                     
