@@ -74,5 +74,22 @@ public class Search {
           }
             return -1;
         }
+
+
+
+            
+            public int ocuurences(int[]input,int target){
+
+                int firstIndex = firstIndex(input,target);
+                int lastIndex = lastIndex(input,target);
+
+
+                return firstIndex == -1 ? 0 : (lastIndex - firstIndex + 1);
+            }
+
+
+                
+                    
+            
 }
 
