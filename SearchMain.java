@@ -34,7 +34,8 @@ public class SearchMain {
 
            //int result = search.squareRoot(4); 
           // int result = search.squareRoot(15); 
-           int result = search.squareRoot(25); 
+//           int result = search.squareRoot(25); 
+           int result = search.squareRoot(10); 
         System.out.println(result);
     }
 

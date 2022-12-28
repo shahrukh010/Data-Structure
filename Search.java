@@ -104,16 +104,35 @@ public class Search {
                     res = index;
                 }*/
 
+                /*
                 int res = 1;
                 while(res*res <=n){
                     res++;
                 }
                 return res-1;
+                */
+
+                int ans = -1;
+
+                int low = 1;
+                int high = n;
+
+                while(low<=high){
+
+                    int mid = (low + (high - low)/2);
+                    int midSq = mid * mid;
+
+                    if(midSq == n)return mid;
+
+                    if(midSq > n)
+                        high = mid-1;
+                    else{
+                        low = mid+1;
+                        ans = mid;
+                    }
+               }
+                return ans;
             }
-
-
-                
-                    
             
 }
 
