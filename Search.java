@@ -209,7 +209,7 @@ public class Search {
                     if(input[low] < input[mid]){
 
                         if(target>=input[low] && target < input[mid]){
-                            high = mid-1;
+                            high = mid-1;//because of target < mid(high) in this case
                         }
                         else{
 
@@ -221,7 +221,7 @@ public class Search {
 
                     if(target > input[mid] && target <=input[high]){
 
-                        low = mid+1;
+                        low = mid+1;//because of target > mid .ie mid is low
                     }
                     else
                         high = mid-1;
