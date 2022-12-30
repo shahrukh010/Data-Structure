@@ -38,14 +38,20 @@ public class SearchMain {
 //            int result = search.squareRoot(10); 
  //           System.out.println(result);
 
-        int[] input = {1,10,15,20,40,80,90,120,500,Integer.MAX_VALUE};
+//        int[] input = {1,10,15,20,40,80,90,120,500,Integer.MAX_VALUE};
 
 //        int result = search.searchFromInfiniteArray(input,5000);
 //          int result = search.searchFromInfinite(input,500);
           //int result = search.searchFromInfinite(input,5000);
           //int result = search.searchFromInfinite(input,15);
 //          int result = search.searchFromInfinite(input,120);
-          int result = search.searchFromInfinite(input,10);
+//          int result = search.searchFromInfinite(input,10);
+
+        int[] input = {10,20,40,60,5,8};
+        //int result = search.searchFromRotatedArray(input,5);
+        //int result = search.searchFromRotatedArray(input,8);
+        //int result = search.searchFromRotatedArray(input,20);
+        int result = search.searchFromRotatedArray(input,10);
         System.out.println(result);
     }
 
