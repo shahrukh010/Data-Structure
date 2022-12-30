@@ -133,6 +133,24 @@ public class Search {
                }
                 return ans;
             }
+
+
+
+            public int searchFromInfiniteArray(int[]input, int target){
+
+
+                //it takes O(position)time
+               for(int index = 0; index < input.length; index++){
+
+                   if(input[index] == target)
+                       return index;
+
+                   if(input[index] > target)
+                       return -1;
+               }
+               return -1;
+
+            }
             
 }
 

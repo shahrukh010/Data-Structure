@@ -35,7 +35,12 @@ public class SearchMain {
            //int result = search.squareRoot(4); 
           // int result = search.squareRoot(15); 
 //           int result = search.squareRoot(25); 
-           int result = search.squareRoot(10); 
+//            int result = search.squareRoot(10); 
+ //           System.out.println(result);
+
+        int[] input = {1,10,15,20,40,80,90,120,500,Integer.MAX_VALUE};
+
+        int result = search.searchFromInfiniteArray(input,5000);
         System.out.println(result);
     }
 
