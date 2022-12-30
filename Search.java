@@ -151,6 +151,47 @@ public class Search {
                return -1;
 
             }
-            
+
+            private int search(int[]input,int low,int high, int target){
+
+                while(low<=high){
+
+                    int mid = (low +(high - low));
+
+                    if(input[mid]== target)
+                        return mid;
+
+                    if(input[mid] < target){
+
+                        low = mid+1;
+                    }
+                    else
+                        high = mid-1;
+                }
+                return -1;
+            }
+
+
+            public int searchFromInfinite(int[]input,int target){
+
+                if(input[0] == target)
+                    return 0;
+
+                int index = 1;
+
+                while(index * 2 < input.length && input[index]< target){
+
+                    index = index * 2;
+                }
+                if(input[index] == target){
+                    return index;
+                }
+
+                /*
+                 *index/2+1 because of we already check index where element was not present index-1 also not present
+                 */
+                return search(input,((index/2)+1),index-1,target);
+
+            }
 }
 

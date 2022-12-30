@@ -40,7 +40,12 @@ public class SearchMain {
 
         int[] input = {1,10,15,20,40,80,90,120,500,Integer.MAX_VALUE};
 
-        int result = search.searchFromInfiniteArray(input,5000);
+//        int result = search.searchFromInfiniteArray(input,5000);
+//          int result = search.searchFromInfinite(input,500);
+          //int result = search.searchFromInfinite(input,5000);
+          //int result = search.searchFromInfinite(input,15);
+//          int result = search.searchFromInfinite(input,120);
+          int result = search.searchFromInfinite(input,10);
         System.out.println(result);
     }
 
