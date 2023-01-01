@@ -230,5 +230,16 @@ public class Search {
                 }
                 return -1;
             }
+
+
+
+            public int peakElement(int[] input){
+
+                int low = 0;
+                int high = input.lenght-1;
+
+            }
+
+
 }
 
