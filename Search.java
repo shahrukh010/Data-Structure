@@ -235,11 +235,21 @@ public class Search {
 
             public int peakElement(int[] input){
 
-                int low = 0;
-                int high = input.lenght-1;
+                int n = input.length;
+                if(n==1)
+                    return input[0];
 
+                if(input[0] >=input[1])
+                    return input[0];
+                
+                if(input[n-1] >=input[n-2])
+                    return input[n-1];
+
+                for(int index = 1; index < n; index++)
+                    if(input[index] >=input[index-1] && input[index] >=input[index+1])
+                        return input[index];
+                return input[0];
             }
-
 
 }
 
