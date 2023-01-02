@@ -47,11 +47,16 @@ public class SearchMain {
 //          int result = search.searchFromInfinite(input,120);
 //          int result = search.searchFromInfinite(input,10);
 
-        int[] input = {10,20,40,60,5,8};
+//        int[] input = {10,20,40,60,5,8};
         //int result = search.searchFromRotatedArray(input,5);
         //int result = search.searchFromRotatedArray(input,8);
         //int result = search.searchFromRotatedArray(input,20);
-        int result = search.searchFromRotatedArray(input,10);
+//        int result = search.searchFromRotatedArray(input,10);
+ //       System.out.println(result);
+
+        //int[] input = {10,7,8,20,12};
+        int[] input = {5,10,20,15,7};
+        int result = search.peakElement(input);
         System.out.println(result);
     }
 
