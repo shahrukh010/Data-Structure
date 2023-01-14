@@ -63,8 +63,14 @@ public class SearchMain {
 //        int[] input =  {5,10,20,15};
        // int[] input =  {5,10,10,15,100};
         //int[] input =  {5,10,10,15,100,50};
-        int[] input =  {1,3,20,4,1,0};
-        int result = search.peakBinarySearch(input);
+//        int[] input =  {1,3,20,4,1,0};
+ //       int result = search.peakBinarySearch(input);
+
+//        int[] a = {1,12,15,26,38};
+ //       int[] b = {2,13,17,30,45};
+        int[] a = {10,20,30,40,50};
+        int[] b = {5,15,25,35,45};
+        int result = search.midElement(a,b);
         System.out.println(result);
     }
 

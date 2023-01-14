@@ -281,6 +281,8 @@ public class Search {
 
             public int midElement(int[]a, int[]b){
 
+                java.util.Arrays.sort(a);
+                java.util.Arrays.sort(b);
 
                 int[] array = new int[a.length + b.length];
 
@@ -288,27 +290,11 @@ public class Search {
                 for( ; index < a.length;index++)
                     array[index] = a[index];
 
-                for(int j = 0; j<b.length;j++)
-                    array[index++] = b[j];
+                for(;int j = 0; j<b.length-1;index++)
+                    array[index] = b[index];
 
-                java.util.Arrays.sort(array);
                 System.out.println(java.util.Arrays.toString(array));
-
-                int median = 0;
-                
-                if(array.length % 2 !=0) {
-
-                   //System.out.println(median);
-                    median = (array.length/2);
-                    return array[median];
-                }
-               else{
-
-                   median = array.length/2;
-                   
-                   int sum = array[median] + array[median-1];
-                   return sum/2;
-               }
+                return 0;
             }
 
 
