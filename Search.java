@@ -251,5 +251,31 @@ public class Search {
                 return input[0];
             }
 
+            public int peakBinarySearch(int[]input){
+
+                int left = 0;
+                int right = input.length-1;
+
+                
+                while(left < right){
+
+                    int mid = (left +(right - left)/2);
+
+                    if(mid == 0 || mid==input.length)return input[mid];
+
+                    if(input[mid] > input[mid-1] && input[mid] > input[mid+1])
+                        return input[mid];
+
+                    else if(input[mid] < input[mid-1])
+                        right = mid-1;
+                        
+                    else
+                        left = mid+1;
+                }
+
+                return -1;
+
+            }
+
 }
 

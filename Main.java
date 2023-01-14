@@ -182,10 +182,10 @@ public class Main{
 
             //int[] input = {3,4,8,-9,9,7};
             //int[] input = {4,2,-2};
-            int[] input = {4,2,2};
+   //         int[] input = {4,2,2};
 
-            boolean result = array.equilibriumPoint(input);
-            System.out.println(result);
+  //          boolean result = array.equilibriumPoint(input);
+            int[] input = {10,20,15,2,23,90,67};
     }
 
 }
