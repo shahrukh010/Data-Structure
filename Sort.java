@@ -120,6 +120,26 @@ public class Sort {
         return input;
     }
 
+
+    public void common(int[]a,int[]b){
+
+
+        for(int index = 0; index < a.length; index++){
+
+            if(index ==0 || a[index] !=a[index-1]){
+
+            for(int j = 0; j < b.length;j++){
+
+                if(a[index] == b[j]){
+                    System.out.print(a[index]+",");
+                    break;
+                }
+            }
+          }
+
+        }
+    }
+
     private void swap(int[]input, int i, int j){
 
         int tmp = input[i];

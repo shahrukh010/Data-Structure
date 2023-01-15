@@ -19,17 +19,25 @@ public class SortMain {
 //          int[] a = {10,15,20};
 //          int[] b = {5,6,6,15};
 
-          int[] a = {1,2,3,4,6,8};
-          int[] b = {5,7,9,10,};
+          //int[] a = {1,2,3,4,6,8};
+          //int[] b = {5,7,9,10,};
 //          int[] sortedArray = sort.mergeTwoSortedArray(a,b);
           
-          int[]input = {1,2,10,15,20,21,22,3,5,6,11,30,33,0};
+          //int[]input = {1,2,10,15,20,21,22,3,5,6,11,30,33,0};
 
-          int mid = ((input.length-1)/2);
-          int high = input.length-1;
+          //int mid = ((input.length-1)/2);
+          //int high = input.length-1;
 //          int[] sortedArray = sort.merge(input,0,mid,high);
-          int[] sortedArray = sort.mergeSort(input,0,input.length-1);
-        System.out.println(java.util.Arrays.toString(sortedArray));
+          //int[] sortedArray = sort.mergeSort(input,0,input.length-1);
+//        System.out.println(java.util.Arrays.toString(sortedArray));
+
+          //int[] a = {3,5,10,10,15,15,20};
+          //int[] b = {5,10,10,15,30};
+
+          int[] a = {1,1,3,3,3};
+          int[] b = {1,1,1,3,5,7};
+
+          sort.common(a,b);
     }
 
 }
