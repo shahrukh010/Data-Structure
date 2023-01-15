@@ -77,6 +77,30 @@ public class Sort {
 
         return merge;
     }
+    public int[] merge(int[]input,int low, int mid, int high){
+
+        int i = low;
+        int j = mid+1;
+
+        int[] merge = new int[input.length];
+        int k = 0;
+
+        while(i<=mid && j<=high){
+
+            if(input[i] < input[j])
+                merge[k++] = input[i++];
+            else
+                merge[k++] = input[j++];
+        }
+
+        for(; i<=mid;i++)
+            merge[k++] = input[i];
+
+        for(; j<=high; j++)
+            merge[k++] = input[j];
+
+        return merge;
+    }
 
     private void swap(int[]input, int i, int j){
 

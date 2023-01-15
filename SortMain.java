@@ -21,9 +21,14 @@ public class SortMain {
 
           int[] a = {1,2,3,4,6,8};
           int[] b = {5,7,9,10,};
-          int[] sortedArray = sort.mergeTwoSortedArray(a,b);
-        System.out.println(java.util.Arrays.toString(sortedArray));
+//          int[] sortedArray = sort.mergeTwoSortedArray(a,b);
+          
+          int[]input = {1,2,10,15,20,21,22,3,5,6,11,30,33};
 
+          int mid = ((input.length-1)/2);
+          int high = input.length-1;
+          int[] sortedArray = sort.merge(input,0,mid,high);
+        System.out.println(java.util.Arrays.toString(sortedArray));
     }
 
 }
