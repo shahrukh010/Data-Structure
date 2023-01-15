@@ -124,6 +124,9 @@ public class Sort {
     public void common(int[]a,int[]b){
 
 
+        //oN2
+        
+        /*
         for(int index = 0; index < a.length; index++){
 
             if(index ==0 || a[index] !=a[index-1]){
@@ -136,8 +139,29 @@ public class Sort {
                 }
             }
           }
+        }*/
 
+        int i = 0;
+        int m = a.length;
+        int j = 0;
+        int n = b.length;
+
+        while(i<m && j < n){
+        if(i > 0 && a[i] ==a[i-1]){
+            i++;
+            continue;//remaining element will be not executed
         }
+
+        if(a[i] < b[j])i++;
+
+        else if (a[i] > b[j])j++;
+
+        else{
+            System.out.print(a[i]+",");
+            i++;
+            j++;
+        }
+      }
     }
 
     private void swap(int[]input, int i, int j){
