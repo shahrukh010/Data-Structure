@@ -354,6 +354,8 @@ public class Search {
             public boolean isExistsTarget(int[]input, int target){
 
 
+                //o(n2)
+                /*
                 for(int index = 0; index < input.length; index++){
 
 
@@ -362,6 +364,19 @@ public class Search {
                         if(input[index] + input[j] == target)
                             return true;
                     }
+            }*/
+
+            int left = 0;
+            int right = input.length-1;
+            while(left < right){
+
+                if(input[left] + input[right] == target)
+                    return true;
+
+                if(input[left] + input[right] > target)
+                    right--;
+                else
+                    left++;
             }
             return false;
           }
