@@ -52,6 +52,32 @@ public class Sort {
 
     }
 
+
+    public int[] mergeTwoSortedArray(int[]a,int[]b){
+
+        int i = 0;
+        int j = 0;
+
+        int[] merge = new int[a.length + b.length];
+        int k = 0;
+
+        while(i<=a.length-1 && j<=b.length-1){
+
+            if(a[i] <b[j])
+                merge[k++] = a[i++];
+            else
+                merge[k++] = b[j++];
+        }
+
+        for(; i<a.length;i++)
+            merge[k++] = a[i];
+
+        for(; j<b.length;j++)
+            merge[k++] = b[j];
+
+        return merge;
+    }
+
     private void swap(int[]input, int i, int j){
 
         int tmp = input[i];

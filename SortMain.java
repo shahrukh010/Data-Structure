@@ -15,8 +15,14 @@ public class SortMain {
 //        sort.bubble(nums);
 //          sort.selection(nums);
 
-          sort.insertion(nums);
-        System.out.println(java.util.Arrays.toString(nums));
+//          sort.insertion(nums);
+//          int[] a = {10,15,20};
+//          int[] b = {5,6,6,15};
+
+          int[] a = {1,2,3,4,6,8};
+          int[] b = {5,7,9,10,};
+          int[] sortedArray = sort.mergeTwoSortedArray(a,b);
+        System.out.println(java.util.Arrays.toString(sortedArray));
 
     }
 
