@@ -68,9 +68,16 @@ public class SearchMain {
 
 //        int[] a = {1,12,15,26,38};
  //       int[] b = {2,13,17,30,45};
-        int[] a = {10,20,30,40,50};
-        int[] b = {5,15,25,35,45};
-        int result = search.midElement(a,b);
+//        int[] a = {10,20,30,40,50};
+ //       int[] b = {5,15,25,35,45};
+        int[] a = {1,2,3,4,5,6};
+        int[] b = {10,20,30,40,50};
+
+//        int[] input = {0,2,1,3,2};
+           int[] input = {0,1,3,2,4,5};
+//          int[] input = {5,4,1,5,3,2};
+//        int result = search.midElement(a,b);
+        int result = search.repeatElement(input);
         System.out.println(result);
     }
 

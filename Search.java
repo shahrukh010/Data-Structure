@@ -312,5 +312,42 @@ public class Search {
             }
 
 
+            public int repeatElement(int[]input){
+
+                //n2
+                /*
+                for(int i = 0; i < input.length; i++){
+
+
+                    for(int j = i+1; j < input.length; j++){
+
+                        if(input[i] == input[j])return input[i];
+                    }
+                }*/
+
+                //nlogn but it modify array
+                
+                /*
+                java.util.Arrays.sort(input);
+                for(int index = 0; index < input.length; index++){
+
+                    if(input[index] == input[index+1])
+                        return input[index];
+                }*/
+
+                boolean[] visited = new boolean[input.length];
+
+                for(int index = 0; index < input.length; index++){
+                        
+                    if(visited[input[index]]){
+
+                        return input[index];
+                    }
+
+                    visited[input[index]] = true;
+                }
+                return -1;
+            }
+
 }
 
