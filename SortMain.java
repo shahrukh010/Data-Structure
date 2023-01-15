@@ -53,9 +53,15 @@ public class SortMain {
 
 //          int[] arr = {2,4,1,3,5};
 //            int[] arr = {10,20,30,40};
-          int[] arr = {40,30,20,10};
-          int result = sort.countInversion(arr);
-          System.out.println(result);
+//          int[] arr = {40,30,20,10};
+//          int result = sort.countInversion(arr);
+//          System.out.println(result);
+
+          //int[] input = {10,80,30,90,40,50,70};
+          int[] input = {70,60,80,40,30};
+
+          sort.partitionByLomuto(input,0,input.length-1);
+          System.out.println(java.util.Arrays.toString(input));
     }
 
 }

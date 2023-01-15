@@ -221,6 +221,26 @@ public class Sort {
                 return res;
             }
 
+
+
+
+            public void partitionByLomuto(int[]input,int low,int high){
+
+                int pivot = input[high];//standard lomuto partion say that pivot is always last element.
+
+                int i = low-1;
+
+                for(int j = low; j <= high-1; j++){
+
+                    if(input[j] < pivot){
+
+                        i++;
+                        swap(input,i,j);
+                    }
+                }
+                swap(input,i+1,high);
+            }
+
     private void swap(int[]input, int i, int j){
 
         int tmp = input[i];
