@@ -33,6 +33,25 @@ public class Sort {
         }
     }
 
+
+    public void insertion(int[] input){
+
+
+        for(int index = 1; index < input.length; index++){
+
+            int tmp = input[index];
+            int j = index-1;
+
+            while(j>=0 && input[j] > tmp){
+
+                input[j+1] = input[j];
+                j--;
+            }
+            input[j+1] = tmp;
+        }
+
+    }
+
     private void swap(int[]input, int i, int j){
 
         int tmp = input[i];
