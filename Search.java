@@ -335,6 +335,7 @@ public class Search {
                         return input[index];
                 }*/
 
+                //o(n)s(n)
                 boolean[] visited = new boolean[input.length];
 
                 for(int index = 0; index < input.length; index++){
@@ -348,6 +349,22 @@ public class Search {
                 }
                 return -1;
             }
+
+
+            public boolean isExistsTarget(int[]input, int target){
+
+
+                for(int index = 0; index < input.length; index++){
+
+
+                    for(int j = index+1; j < input.length; j++){
+
+                        if(input[index] + input[j] == target)
+                            return true;
+                    }
+            }
+            return false;
+          }
 
 }
 

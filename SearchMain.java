@@ -74,10 +74,13 @@ public class SearchMain {
         int[] b = {10,20,30,40,50};
 
 //        int[] input = {0,2,1,3,2};
-           int[] input = {0,1,3,2,4,5};
+//           int[] input = {0,1,3,2,4,5};
 //          int[] input = {5,4,1,5,3,2};
 //        int result = search.midElement(a,b);
-        int result = search.repeatElement(input);
+//        int result = search.repeatElement(input);
+          //int[] input = {2,5,8,12,30};   
+          int[] input = {3,8,13,18};   
+           boolean  result = search.isExistsTarget(input,14);
         System.out.println(result);
     }
 
