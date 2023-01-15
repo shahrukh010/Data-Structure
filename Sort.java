@@ -164,6 +164,46 @@ public class Sort {
       }
     }
 
+            public void union(int[]a,int[]b){
+
+                int i = 0;
+                int j = 0;
+                int m = a.length;
+                int n = b.length;
+
+                while(i < m && j < n){
+
+                    if(i > 0 && a[i] == a[i-1]){
+                        i++;
+                        continue;
+                    }
+
+                    if(j > 0 && b[j] == b[j-1]){
+                        j++;
+                         continue;
+                    }
+
+                    if(a[i] < b[j]){
+                        System.out.print(a[i]+",");
+                        i++;
+                    }
+                    else if(a[i] > b[j]){
+                        System.out.print(b[j]+",");
+                        j++;
+                    }
+                    else{
+                        System.out.print(b[j]+",");
+                        i++;
+                        j++;
+                    }
+                }
+
+                while(i<m && a[i] !=a[i-1])
+                  System.out.print(a[i++]+",");
+                while(j<n && b[j] !=b[j-1])
+                    System.out.print(b[j++]+",");
+            }
+
     private void swap(int[]input, int i, int j){
 
         int tmp = input[i];

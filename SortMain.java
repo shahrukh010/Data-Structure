@@ -31,15 +31,25 @@ public class SortMain {
           //int[] sortedArray = sort.mergeSort(input,0,input.length-1);
 //        System.out.println(java.util.Arrays.toString(sortedArray));
 
-          int[] a = {3,5,10,10,15,15,20};
-          int[] b = {5,10,10,15,30};
+//          int[] a = {3,5,10,10,15,15,20};
+//          int[] b = {5,10,10,15,30};
 
 //          int[] a = {1,1,3,3,3};
 //         int[] b = {1,1,1,3,5,7};
 //          int[] a = {1,20,20,40,60};
 //          int[] b = {2,20,20,20};
 
-          sort.common(a,b);
+ //         sort.common(a,b);
+
+//          int[] a = {3,5,8};
+//          int[] b = {2,8,9,10,15};
+
+//          int[] a = {2,3,3,3,4,4};
+//          int[] b = {4,4};
+
+          int[] a = {10,20,20};
+          int[] b = {5,20,40,40};
+          sort.union(a,b);
     }
 
 }
