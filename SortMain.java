@@ -47,9 +47,15 @@ public class SortMain {
 //          int[] a = {2,3,3,3,4,4};
 //          int[] b = {4,4};
 
-          int[] a = {10,20,20};
-          int[] b = {5,20,40,40};
-          sort.union(a,b);
+//          int[] a = {10,20,20};
+//          int[] b = {5,20,40,40};
+//          sort.union(a,b);
+
+//          int[] arr = {2,4,1,3,5};
+//            int[] arr = {10,20,30,40};
+          int[] arr = {40,30,20,10};
+          int result = sort.countInversion(arr);
+          System.out.println(result);
     }
 
 }

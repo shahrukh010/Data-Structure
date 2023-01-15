@@ -204,6 +204,23 @@ public class Sort {
                     System.out.print(b[j++]+",");
             }
 
+
+            public int countInversion(int[]input){
+
+                int res = 0;
+
+                for(int index = 0; index < input.length; index++){
+
+
+                    for(int j = index+1; j < input.length; j++){
+
+                        if(input[index] > input[j])
+                            res++;
+                    }
+                }
+                return res;
+            }
+
     private void swap(int[]input, int i, int j){
 
         int tmp = input[i];
