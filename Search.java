@@ -381,5 +381,24 @@ public class Search {
             return false;
           }
 
+
+          public boolean tripletExists(int[]input,int target){
+
+              for(int i = 0; i < input.length-2; i++){
+
+
+                  for(int j = i+1; j < input.length-1; j++){
+
+
+                      for(int k = j+1; k < input.length; k++){
+
+                          if((input[i] + input[j] + input[k]) == target)return true;
+                      }
+                  }
+              }
+              return false;
+          }
+
+
 }
 

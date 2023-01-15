@@ -80,8 +80,11 @@ public class SearchMain {
 //        int result = search.repeatElement(input);
 //          int[] input = {2,5,8,12,30};   
 //          int[] input = {3,8,13,18};   
-          int[] input = {2,3,8,11};   
-           boolean  result = search.isExistsTarget(input,14);
+          //int[] input = {2,3,8,11};   
+
+        int[] input = {2,3,4,8,9,20,40};
+           //boolean  result = search.isExistsTarget(input,14);
+           boolean result = search.tripletExists(input,32);
         System.out.println(result);
     }
 
