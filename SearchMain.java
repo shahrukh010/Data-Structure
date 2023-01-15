@@ -84,7 +84,7 @@ public class SearchMain {
 
         int[] input = {2,3,4,8,9,20,40};
            //boolean  result = search.isExistsTarget(input,14);
-           boolean result = search.tripletExists(input,32);
+           boolean result = search.tripletExists(input,69);
         System.out.println(result);
     }
 

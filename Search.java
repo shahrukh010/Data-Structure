@@ -384,6 +384,7 @@ public class Search {
 
           public boolean tripletExists(int[]input,int target){
 
+              /*
               for(int i = 0; i < input.length-2; i++){
 
 
@@ -396,8 +397,30 @@ public class Search {
                       }
                   }
               }
+              */
+
+              for(int index = 0 ; index < input.length; index++){
+
+                  int ntf = target - input[index];
+
+                  int left = index+1;
+                  int right = input.length-1;
+                  while(left < right){
+
+                      if(input[left] + input[right] == ntf)
+                          return true;
+
+                      if(input[left] + input[right] > target)
+                          right--;
+                      else
+                          left++;
+               }
+              }
               return false;
           }
+
+
+          
 
 
 }
