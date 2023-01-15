@@ -23,11 +23,12 @@ public class SortMain {
           int[] b = {5,7,9,10,};
 //          int[] sortedArray = sort.mergeTwoSortedArray(a,b);
           
-          int[]input = {1,2,10,15,20,21,22,3,5,6,11,30,33};
+          int[]input = {1,2,10,15,20,21,22,3,5,6,11,30,33,0};
 
           int mid = ((input.length-1)/2);
           int high = input.length-1;
-          int[] sortedArray = sort.merge(input,0,mid,high);
+//          int[] sortedArray = sort.merge(input,0,mid,high);
+          int[] sortedArray = sort.mergeSort(input,0,input.length-1);
         System.out.println(java.util.Arrays.toString(sortedArray));
     }
 

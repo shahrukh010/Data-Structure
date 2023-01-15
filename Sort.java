@@ -77,13 +77,13 @@ public class Sort {
 
         return merge;
     }
-    public int[] merge(int[]input,int low, int mid, int high){
+    public void merge(int[]input,int low, int mid, int high){
 
         int i = low;
         int j = mid+1;
 
         int[] merge = new int[input.length];
-        int k = 0;
+        int k = low;
 
         while(i<=mid && j<=high){
 
@@ -99,7 +99,25 @@ public class Sort {
         for(; j<=high; j++)
             merge[k++] = input[j];
 
-        return merge;
+        for(int index = low; index<=high;index++)
+            input[index] = merge[index];
+//        return merge;
+    }
+
+
+    public int[] mergeSort(int[]input,int low ,int high){
+
+
+        if(high > low){
+
+            int mid = (low+(high - low)/2);//same as low+high/2 becase of overflow low+(high-low)/2 taking mergeSort,and binarySrch
+
+            mergeSort(input,low,mid);
+            mergeSort(input,mid+1,high);
+            merge(input,low,mid,high);
+        }
+//        System.out.println(java.util.Arrays.toString(input));
+        return input;
     }
 
     private void swap(int[]input, int i, int j){
