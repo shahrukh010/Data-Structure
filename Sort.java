@@ -282,14 +282,82 @@ public class Sort {
                 return i+1;
             }
 
+            private int partitionHoars(int[]input, int low ,int high){
+
+                int pivot = low;
+                int i = low-1;
+                int j = high+1;
+
+                while(true){
+
+                do{
+                    i++;
+                }while(input[i] < input[pivot]);
+
+                do{
+                    j--;
+                }while(input[j] > input[pivot]);
+
+                if(i>=j)return j;
+                swap(input,i++,j--);
+            }
+          }
+
             public void quickSort(int[]input,int low, int high){
 
+                
                 if(low < high){
 
+                //using lomuto
+                    /*
+                     
                     int pivot = partition(input,low,high);
                     quickSort(input,low,pivot-1);
                     quickSort(input,pivot+1,high);
+
+                    */
+
+                    int pivot = partitionHoars(input,low,high);
+                    quickSort(input,low,pivot);
+                    quickSort(input,pivot+1,high);
                 }
+            }
+
+
+            private int pivotLomuto(int[]input,int low ,int high){
+
+                int i = low-1;
+                int pivot = high;
+
+                for(int index = low ;index < input.length ; index++){
+
+                    if(input[index] < input[pivot]){
+                        i++;
+                        swap(input,i,index);
+                    }
+                }
+                swap(input,i+1,pivot);
+                return i+1;
+            }
+
+            public int kthSmallestElement(int[]input,int k){
+
+                int low = 0;
+                int high = input.length-1;
+                
+                while(low<=high){
+
+                    int pivot = pivotLomuto(input,low,high);
+
+                    if(pivot == k-1)
+                        return input[pivot];
+
+                    if(pivot > k-1)
+                        high = pivot-1;
+                    else
+                        low = pivot+1;
+                }
+                return -1;
             }
 
 
@@ -301,5 +369,4 @@ public class Sort {
         input[i] = input[j];
         input[j] = tmp;
     }
-
 }

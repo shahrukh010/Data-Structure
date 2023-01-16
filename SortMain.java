@@ -60,13 +60,20 @@ public class SortMain {
           //int[] input = {10,80,30,90,40,50,70};
 //          int[] input = {70,60,80,40,30};
 
-//          sort.partitionByLomuto(input,0,input.length-1);
+//          int[] input = {30,20,5,10,8};
+ //         sort.partitionByLomuto(input,0,input.length-1);
           //int[] input = {5,3,8,4,2,7,1,10};
 //          sort.partitionByHoars(input);
  //         System.out.println(java.util.Arrays.toString(input));
-          int[] input = {8,4,7,9,3,10,5,0,-4};
-          sort.quickSort(input,0,input.length-1);
-          System.out.println(java.util.Arrays.toString(input));
+//          int[] input = {8,4,7,9,3,10,5,0,-4};
+ //         sort.quickSort(input,0,input.length-1);
+          //System.out.println(java.util.Arrays.toString(input));
+          //int[] input = {30,20,5,10,8};
+//          int[] input = {10,4,5,8,11,6,26};
+          int[] input = {10,5,30,12};
+          int res = sort.kthSmallestElement(input,2);
+          System.out.println(res);
     }
-
 }
+
+
