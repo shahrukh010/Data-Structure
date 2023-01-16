@@ -241,6 +241,27 @@ public class Sort {
                 swap(input,i+1,high);
             }
 
+
+            public int partitionByHoars(int[]input){
+
+                int pivot = input[0];
+                int i = -1;
+                int j = input.length;
+
+                while(true){
+                do{
+                    i++;
+                }while(input[i] < pivot);
+                do{
+                    j--;
+                }while(input[j] > pivot);
+
+                if(i>=j)return j;
+
+                swap(input,i++,j--);
+               }
+            }
+
     private void swap(int[]input, int i, int j){
 
         int tmp = input[i];
