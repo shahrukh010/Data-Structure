@@ -262,6 +262,39 @@ public class Sort {
                }
             }
 
+
+
+
+            private int partition(int[]input,int low, int high){
+
+                //lomuto partition for quick sort
+                int i = low-1;
+                int pivot = high;
+
+                for(int index = low; index < input.length; index++){
+
+                    if(input[index] < input[high]){
+                        i++;
+                        swap(input,i,index);
+                    }
+                }
+                swap(input,i+1,pivot);
+                return i+1;
+            }
+
+            public void quickSort(int[]input,int low, int high){
+
+                if(low < high){
+
+                    int pivot = partition(input,low,high);
+                    quickSort(input,low,pivot-1);
+                    quickSort(input,pivot+1,high);
+                }
+            }
+
+
+
+
     private void swap(int[]input, int i, int j){
 
         int tmp = input[i];

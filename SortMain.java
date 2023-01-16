@@ -61,8 +61,11 @@ public class SortMain {
 //          int[] input = {70,60,80,40,30};
 
 //          sort.partitionByLomuto(input,0,input.length-1);
-          int[] input = {5,3,8,4,2,7,1,10};
-          sort.partitionByHoars(input);
+          //int[] input = {5,3,8,4,2,7,1,10};
+//          sort.partitionByHoars(input);
+ //         System.out.println(java.util.Arrays.toString(input));
+          int[] input = {8,4,7,9,3,10,5,0,-4};
+          sort.quickSort(input,0,input.length-1);
           System.out.println(java.util.Arrays.toString(input));
     }
 
