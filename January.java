@@ -45,6 +45,27 @@ class Sorting{
         }
 
 
+                private int hoars(int[]input,int low, int high){
+
+                    int pivot = input[low];
+
+                    int left = low;
+                    int right = high;
+
+                    while(left< right){
+
+                        while(left < input.length && input[left]<=pivot) left++;
+                        while(input[right] >pivot)right--;
+
+                        if(left < right)swap(input,left,right);
+                    }
+
+                    input[low] = input[right];
+                    input[right] = pivot;
+                    return right;
+                }
+
+
                         private int lomuto(int[]input,int low,int high){
 
                             int i = low-1; 
@@ -65,8 +86,8 @@ class Sorting{
 
                             if(low < high){
 
-                                int pivot = lomuto(input,low,high);
-                                quickSort(input,low,pivot-1);
+                                int pivot = hoars(input,low,high);
+                                quickSort(input,low,pivot);
                                 quickSort(input,pivot+1,high);
                             }
                         }
@@ -214,9 +235,10 @@ public class January{
 
         //int[] input = {10,4,5,8,11,6,26};
         //int[] input = {10,5,30,12};
-        int[] input = {30,20,5,10,8};
+        //int[] input = {30,20,5,10,8};
  //       int result = sort.kthSmallestElement(input,0,input.length-1,4);
 //        System.out.println(result);
+        int[] input = {5,3,1,0,2,4};
         sort.quickSort(input,0,input.length-1);
         System.out.println(java.util.Arrays.toString(input));
 
