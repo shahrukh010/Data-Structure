@@ -64,6 +64,18 @@ class Math{
                 return res;
             }
 
+            public int gcd(int a, int b){
+
+                int min = java.lang.Math.min(a,b);
+
+                while(min>0){
+
+                    if(a % min == 0 && b % min ==0)return min;
+                    min--;
+            }
+            return 1;
+            }
+
 }
         
 public class January{
@@ -88,7 +100,11 @@ public class January{
 //        int res = math.trailingZero(5);
        // int res = math.trailingZero(10);
 //        int res = math.trailingZero(24);
-        int res = math.trailingZero(251);
+//        int res = math.trailingZero(251);
+ //       System.out.println(res);
+
+        //int res = math.gcd(10,15);
+        int res = math.gcd(13,15);
         System.out.println(res);
     }
 
