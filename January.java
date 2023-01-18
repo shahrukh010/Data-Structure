@@ -135,6 +135,90 @@ class Sorting{
                                         }
 
                                     }
+
+
+
+                                    //it takes o(n2)
+                                    public void common(int[]a,int[] b){
+
+                                        for(int i = 0; i < a.length;i++){
+
+                                            if(i > 0 && a[i] == a[i-1])continue;
+                                            for(int j = 0; j < b.length; j++){
+
+                                                if(a[i] == b[j]){
+                                                    System.out.print(a[i]+",");
+                                                    break;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    //optimze version of common nlogn simlar to merge sort
+                                    public void intersection(int[]a,int[]b){
+
+                                        int i = 0;
+                                        int j = 0;
+                                        int m = a.length-1;
+                                        int n = b.length-1;
+
+                                        while(i<=m && j <=n){
+
+                                            if(i>0 && a[i] == a[i-1]){
+                                                i++;
+                                                continue;
+                                            }
+                                            if(a[i] == b[j]){
+                                                System.out.print(a[i]+",");
+                                                i++;
+                                                j++;
+                                            }
+                                            if(a[i] < b[j])
+                                                i++;
+                                            else
+                                                j++;
+                                    }
+                                  }
+
+
+
+                                                                                        
+                                                                    public void merge(int[]input,int low,int mid,int high){
+
+                                                                        int i = low;
+                                                                        int j = mid+1;
+                                                                        int k = low;
+                                                                        int[] merge = new int[input.length];
+
+                                                                        while(i<=mid && j<=high){
+
+                                                                            if(input[i]<input[j])
+                                                                                merge[k++] = input[i++];
+                                                                            else
+                                                                                merge[k++] = input[j++];
+                                                                        }
+
+                                                                        for(;i<=mid;i++)
+                                                                            merge[k++] = input[i];
+                                                                        for(;j<=high;j++)
+                                                                            merge[k++] = input[j];
+
+                                                                        for(int x = low; x <=high;x++)
+                                                                            input[x] = merge[x];
+
+                                                                    }
+
+                                                                    public void mergeSort(int[]input,int low, int high){
+
+                                                                        if(high > low){
+
+                                                                            int mid = (low +(high - low)/2);
+
+                                                                            mergeSort(input,low,mid);
+                                                                            mergeSort(input,mid+1,high);
+                                                                            merge(input,low,mid,high);
+                                                                        }
+                                                                    }
 }
 class Math{
 
@@ -283,12 +367,20 @@ public class January{
  //       int result = sort.kthSmallestElement(input,0,input.length-1,4);
 //        System.out.println(result);
 //        int[] input = {5,3,1,0,2,4};
-        int[] input = {5,3,8,4,2,7,1,10};
-        sort.quickSort(input,0,input.length-1);
+//        int[] input = {5,3,8,4,2,7,1,10};
+//        sort.quickSort(input,0,input.length-1);
 //        System.out.println(java.util.Arrays.toString(input));
-        int[] a = {4,4};
-        int[] b = {2,3,3,4,4};
-        sort.unionFromSortedArray(a,b);
+//        int[] a = {4,4};
+ //       int[] b = {2,3,3,4,4};
+//        sort.unionFromSortedArray(a,b);
+        int[] a = {3,5,10,10,10,15,15,20};
+        int[] b = {5,10,10,15,30};
+//        sort.common(a,b);
+//        sort.intersection(a,b);
+
+        int[] input = {10,5,30,15,7};
+        sort.mergeSort(input,0,input.length-1);
+        System.out.println(java.util.Arrays.toString(input));
         System.out.println();
 
     }
