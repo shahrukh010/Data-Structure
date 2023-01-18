@@ -57,7 +57,7 @@ class Sorting{
                         while(left < input.length && input[left]<=pivot) left++;
                         while(input[right] >pivot)right--;
 
-                        if(left < right)swap(input,left,right);
+                        if(left < right)swap(input,left++,right--);
                     }
 
                     input[low] = input[right];
@@ -89,8 +89,52 @@ class Sorting{
                                 int pivot = hoars(input,low,high);
                                 quickSort(input,low,pivot);
                                 quickSort(input,pivot+1,high);
+
                             }
                         }
+                                            
+
+                                    public void unionFromSortedArray(int[]a,int[]b){
+
+                                        int i=0;
+                                        int j = 0;
+                                        int m = a.length-1;
+                                        int n = b.length-1;
+
+                                        while(i<=m && j <=n){
+
+                                            if(i > 0 && a[i] == a[i-1]){
+                                                i++;
+                                                continue;
+                                            }
+                                            if(j > 0 && b[j] == b[j-1]){
+                                                j++;
+                                                continue;
+                                            }
+
+                                            if(a[i] < b[j])
+                                                System.out.print(a[i++]+",");
+                                            else if(a[i] > b[j])
+                                                System.out.print(b[j++]+",");
+                                            else{
+                                                System.out.print(a[i]+",");
+                                                i++;
+                                                j++;
+                                            }
+                                        }
+
+                                        while(i<=m){
+                                            if(i>0 && a[i] !=a[i-1])
+                                                System.out.print(a[i]+",");
+                                            i++;
+                                        }
+                                        while(j<=n){
+                                            if(j>0 && b[j] !=b[j-1])
+                                                System.out.print(b[j]+",");
+                                            j++;
+                                        }
+
+                                    }
 }
 class Math{
 
@@ -233,15 +277,19 @@ public class January{
  //       System.out.println(res);
 
 
-        //int[] input = {10,4,5,8,11,6,26};
+//        int[] input = {10,4,5,8,11,6,26};
         //int[] input = {10,5,30,12};
         //int[] input = {30,20,5,10,8};
  //       int result = sort.kthSmallestElement(input,0,input.length-1,4);
 //        System.out.println(result);
-        int[] input = {5,3,1,0,2,4};
+//        int[] input = {5,3,1,0,2,4};
+        int[] input = {5,3,8,4,2,7,1,10};
         sort.quickSort(input,0,input.length-1);
-        System.out.println(java.util.Arrays.toString(input));
-
+//        System.out.println(java.util.Arrays.toString(input));
+        int[] a = {4,4};
+        int[] b = {2,3,3,4,4};
+        sort.unionFromSortedArray(a,b);
+        System.out.println();
 
     }
 
