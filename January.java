@@ -76,6 +76,16 @@ class Math{
             return 1;
             }
 
+            public int lcm(int a, int b){
+
+                int res = java.lang.Math.max(a,b);
+
+                while(true){
+
+                    if(res % a == 0 && res % b==0)return res;
+                    res++;
+            }
+            }
 }
         
 public class January{
@@ -104,7 +114,12 @@ public class January{
  //       System.out.println(res);
 
         //int res = math.gcd(10,15);
-        int res = math.gcd(13,15);
+//        int res = math.gcd(13,15);
+ //       System.out.println(res);
+
+        //int res = math.lcm(4,6);
+        //int res = math.lcm(12,15);
+        int res = math.lcm(2,8);
         System.out.println(res);
     }
 
