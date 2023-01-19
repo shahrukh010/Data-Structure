@@ -312,12 +312,29 @@ class Math{
 
                         public boolean isPrime(int n){
 
-                            for(int i = 2 ; i*i<n ;i++){
+                            for(int i = 2 ; i*i<=n ;i++){
                                 
                                 if(n%i==0)return false;
                             }
                             return true;
 
+                        }
+
+
+
+                        public void primeFactor(int n){
+
+                            for(int i = 2; i <=n; i++){
+
+                                if(isPrime(i)){
+
+                                    int x = i;
+                                    while(n%x==0){
+                                        System.out.print(i+",");
+                                        x = x*i;
+                                    }
+                                }
+                            }
                         }
 }
         
@@ -360,6 +377,11 @@ public class January{
 //        boolean res = math.isPrime(13);
  //       System.out.println(res);
 
+//         math.primeFactor(84);
+         //math.primeFactor(12);
+         math.primeFactor(13);
+//         math.primeFactor(315);
+         System.out.println();
 
 //        int[] input = {10,4,5,8,11,6,26};
         //int[] input = {10,5,30,12};
@@ -373,15 +395,15 @@ public class January{
 //        int[] a = {4,4};
  //       int[] b = {2,3,3,4,4};
 //        sort.unionFromSortedArray(a,b);
-        int[] a = {3,5,10,10,10,15,15,20};
-        int[] b = {5,10,10,15,30};
+    //    int[] a = {3,5,10,10,10,15,15,20};
+     //   int[] b = {5,10,10,15,30};
 //        sort.common(a,b);
 //        sort.intersection(a,b);
 
-        int[] input = {10,5,30,15,7};
-        sort.mergeSort(input,0,input.length-1);
-        System.out.println(java.util.Arrays.toString(input));
-        System.out.println();
+   //     int[] input = {10,5,30,15,7};
+//        sort.mergeSort(input,0,input.length-1);
+ //       System.out.println(java.util.Arrays.toString(input));
+  //      System.out.println();
 
     }
 
