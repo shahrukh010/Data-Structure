@@ -315,6 +315,25 @@ class Sorting{
                                         res = java.lang.Math.min(java.lang.Math.abs(input[i] - input[i-1]),res);
                                 return res;
                             }
+
+
+                            public int chocolcateDistribution(int[]input,int m){
+
+                                java.util.Arrays.sort(input);
+                                int res = Integer.MAX_VALUE;
+
+                                for(int i = 0; i+m-1<=input.length-1; i++){
+
+                                    int min = input[i];
+                                    int max = input[i+1];
+                                    for(int j = 2; j <=m-1;j++){
+
+                                         max = java.lang.Math.max(max,input[j+i]);
+                                    }
+                                    res  = java.lang.Math.min(res,max - min);
+                                }
+                                return res;
+                            }
 }
 class Math{
 
@@ -569,11 +588,15 @@ public class January{
 //       sort.selectionSort(input);
  //      sort.bubble(input);
 //       System.out.println(java.util.Arrays.toString(input));
-       int[] input = {1,8,12,5,18};
+//       int[] input = {1,8,12,5,18};
       // int[] input = {8,-1,0,3};
 //       int[] input = {10};
-       int res = sort.minDiffArray(input);
-       System.out.println(res);
+//       int res = sort.minDiffArray(input);
+//       int[] input = {7,3,2,4,9,12,56};
+//       int[] input = {3,4,1,9,56,7,9,12};
+       int[] input = {7,3,1,8,9,12,56};
+      int res = sort.chocolcateDistribution(input,3); 
+    System.out.println(res);
     }
 
 }
