@@ -334,6 +334,18 @@ class Sorting{
                                 }
                                 return res;
                             }
+
+                            public void segrateAllNegativeLeft(int[]input){
+
+                                int i = -1;
+                                for(int j=0;j<input.length;j++){
+
+                                    if(input[j]<0){
+                                        i++;
+                                        swap(input,i,j);
+                                    }
+                                }
+                            }
 }
 class Math{
 
@@ -594,9 +606,12 @@ public class January{
 //       int res = sort.minDiffArray(input);
 //       int[] input = {7,3,2,4,9,12,56};
 //       int[] input = {3,4,1,9,56,7,9,12};
-       int[] input = {7,3,1,8,9,12,56};
-      int res = sort.chocolcateDistribution(input,3); 
-    System.out.println(res);
+//       int[] input = {7,3,1,8,9,12,56};
+//      int res = sort.chocolcateDistribution(input,3); 
+//       int[] input = {15,-3,-2,18};
+       int[] input = {-2,3,-1,6,-3,7,0};
+                  sort.segrateAllNegativeLeft(input);
+       System.out.println(java.util.Arrays.toString(input));
     }
 
 }
