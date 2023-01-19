@@ -336,6 +336,22 @@ class Math{
                                 }
                             }
                         }
+
+                        //optimze of primeFactor
+                        public void primeFactorization(int n){
+
+                            for(int i=2; i*i<=n; i++){
+
+                                while(n% i==0){
+                                    System.out.print(i+",");
+                                    n = n/i;
+                                }
+                            }
+                            if(n>1)
+                                System.out.print(n);
+                        }
+
+
 }
         
 public class January{
@@ -379,8 +395,9 @@ public class January{
 
 //         math.primeFactor(84);
          //math.primeFactor(12);
-         math.primeFactor(13);
-//         math.primeFactor(315);
+//         math.primeFactor(13);
+         math.primeFactorization(315);
+    //         math.primeFactor(315);
          System.out.println();
 
 //        int[] input = {10,4,5,8,11,6,26};
