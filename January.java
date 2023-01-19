@@ -346,6 +346,32 @@ class Sorting{
                                     }
                                 }
                             }
+
+                            public void segrateEvenOdd(int[]input){
+
+                                int i = -1;
+                                for(int index = 0; index < input.length; index++){
+
+                                    if(input[index] % 2==0){
+                                        i++;
+                                        swap(input,i,index);
+                                    }
+                                }
+
+                            }
+
+                            public void segrateZero(int[]input){
+
+                                int i = -1;
+                                for(int index = 0; index < input.length;index++){
+
+                                    if(input[index]<=0){
+                                        i++;
+                                        swap(input,i,index);
+                                    }
+                                }
+
+                            }
 }
 class Math{
 
@@ -609,8 +635,12 @@ public class January{
 //       int[] input = {7,3,1,8,9,12,56};
 //      int res = sort.chocolcateDistribution(input,3); 
 //       int[] input = {15,-3,-2,18};
-       int[] input = {-2,3,-1,6,-3,7,0};
-                  sort.segrateAllNegativeLeft(input);
+//       int[] input = {-2,3,-1,6,-3,7,0};
+//       int[] input = {15,14,13,12};
+//                  sort.segrateAllNegativeLeft(input);
+//                    sort.segrateEvenOdd(input);
+       int[] input = {0,1,1,0,1,0,1};
+                    sort.segrateZero(input);
        System.out.println(java.util.Arrays.toString(input));
     }
 
