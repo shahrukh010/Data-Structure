@@ -351,6 +351,20 @@ class Math{
                                 System.out.print(n);
                         }
 
+                        public void allDivisor(int n){
+
+                            int i =0;
+                            for(i = 1; i*i<n; i++){
+
+                                if(n%i==0)System.out.print(i+",");
+                            }
+
+                            for(;i>0;i--)
+                                if(n%i==0)
+                                    System.out.print(n/i+",");
+
+                        }
+
 
 }
         
@@ -396,8 +410,10 @@ public class January{
 //         math.primeFactor(84);
          //math.primeFactor(12);
 //         math.primeFactor(13);
-         math.primeFactorization(315);
+//         math.primeFactorization(315);
     //         math.primeFactor(315);
+        //math.allDivisor(15);
+        math.allDivisor(100);
          System.out.println();
 
 //        int[] input = {10,4,5,8,11,6,26};
