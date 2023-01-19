@@ -293,6 +293,21 @@ class Sorting{
                                                                         }
 
                                                                     }
+
+
+                            public int minDiffArray(int[]input){
+
+                                int res = Integer.MAX_VALUE;
+                                for(int i = 0; i < input.length; i++){
+
+                                    for(int j = i+1; j < input.length;j++){
+
+                                         res = java.lang.Math.min(java.lang.Math.abs(input[i]-input[j]),res);
+                                        
+                                    }
+                                }
+                                return res;
+                            }
 }
 class Math{
 
@@ -542,11 +557,15 @@ public class January{
 
        //int[] input = {20,5,40,60,10,30,0};
        //int[] input = {5,3,2,1,0,7,5,9,8,6};
-       int[] input = {5,0,3,2,2,1,0,7,5,9,8,7,6};
+  //     int[] input = {5,0,3,2,2,1,0,7,5,9,8,7,6};
 //       sort.insertionSort(input);
 //       sort.selectionSort(input);
-       sort.bubble(input);
-       System.out.println(java.util.Arrays.toString(input));
+ //      sort.bubble(input);
+//       System.out.println(java.util.Arrays.toString(input));
+       //int[] input = {1,8,12,5,18};
+       int[] input = {8,-1,0,3};
+       int res = sort.minDiffArray(input);
+       System.out.println(res);
     }
 
 }
