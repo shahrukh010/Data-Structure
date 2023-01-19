@@ -219,6 +219,31 @@ class Sorting{
                                                                             merge(input,low,mid,high);
                                                                         }
                                                                     }
+
+
+
+                                                                    public void merge(int[]a,int[]b){
+
+                                                                        int m = a.length-1;
+                                                                        int n = b.length-1;
+                                                                        int i = 0;
+                                                                        int j = 0;
+                                                                        int[] merge = new int[a.length + b.length];
+                                                                        int k = 0;
+                                                                        while(i<=m && j<=n){
+
+                                                                            if(a[i] < b[j])
+                                                                                merge[k++] = a[i++];
+                                                                            else
+                                                                                merge[k++] = b[j++];
+                                                                        }
+                                                                        for(;i<=m;i++)
+                                                                            merge[k++] = a[i];
+
+                                                                        for(;j<=n;j++)
+                                                                            merge[k++] = b[j];
+                                                                        System.out.println(java.util.Arrays.toString(merge));
+                                                                    }
 }
 class Math{
 
@@ -454,8 +479,10 @@ public class January{
 //        int[] a = {4,4};
  //       int[] b = {2,3,3,4,4};
 //        sort.unionFromSortedArray(a,b);
-    //    int[] a = {3,5,10,10,10,15,15,20};
-     //   int[] b = {5,10,10,15,30};
+        int[] a = {3,5,10,10,10,15,15,20};
+       int[] b = {5,10,10,15,30};
+
+       sort.merge(a,b);
 //        sort.common(a,b);
 //        sort.intersection(a,b);
 
