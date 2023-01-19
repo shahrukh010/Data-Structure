@@ -280,6 +280,19 @@ class Sorting{
                                                                         }
 
                                                                     }
+
+                                                                    public void bubble(int[]input){
+
+                                                                        for(int index = 0; index < input.length; index++){
+
+                                                                            for(int j = 0; j < input.length-index-1;j++){
+
+                                                                                if(input[j] > input[j+1])swap(input,j,j+1);
+                                                                            }
+
+                                                                        }
+
+                                                                    }
 }
 class Math{
 
@@ -528,9 +541,11 @@ public class January{
   //      System.out.println();
 
        //int[] input = {20,5,40,60,10,30,0};
-       int[] input = {5,3,2,1,0,7,5,9,8,6};
+       //int[] input = {5,3,2,1,0,7,5,9,8,6};
+       int[] input = {5,0,3,2,2,1,0,7,5,9,8,7,6};
 //       sort.insertionSort(input);
-       sort.selectionSort(input);
+//       sort.selectionSort(input);
+       sort.bubble(input);
        System.out.println(java.util.Arrays.toString(input));
     }
 
