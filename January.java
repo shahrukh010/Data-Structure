@@ -298,6 +298,8 @@ class Sorting{
                             public int minDiffArray(int[]input){
 
                                 int res = Integer.MAX_VALUE;
+                                //it takes o(n2)
+                                /*
                                 for(int i = 0; i < input.length; i++){
 
                                     for(int j = i+1; j < input.length;j++){
@@ -305,7 +307,12 @@ class Sorting{
                                          res = java.lang.Math.min(java.lang.Math.abs(input[i]-input[j]),res);
                                         
                                     }
-                                }
+                                }*/
+
+                                java.util.Arrays.sort(input);//arrange element closest to each other
+
+                                    for(int i = 1 ; i < input.length;i++)
+                                        res = java.lang.Math.min(java.lang.Math.abs(input[i] - input[i-1]),res);
                                 return res;
                             }
 }
@@ -562,8 +569,9 @@ public class January{
 //       sort.selectionSort(input);
  //      sort.bubble(input);
 //       System.out.println(java.util.Arrays.toString(input));
-       //int[] input = {1,8,12,5,18};
-       int[] input = {8,-1,0,3};
+       int[] input = {1,8,12,5,18};
+      // int[] input = {8,-1,0,3};
+//       int[] input = {10};
        int res = sort.minDiffArray(input);
        System.out.println(res);
     }
