@@ -263,6 +263,23 @@ class Sorting{
 
                                                                         }
                                                                     }
+
+
+                                                                    public void selectionSort(int[]input){
+
+
+                                                                        for(int i = 0; i < input.length; i++){
+
+                                                                            int k = i;
+                                                                            for(int j = i+1; j < input.length; j++){
+
+                                                                                if(input[k] > input[j])
+                                                                                    k = j;
+                                                                            }
+                                                                            swap(input,i,k);
+                                                                        }
+
+                                                                    }
 }
 class Math{
 
@@ -510,8 +527,10 @@ public class January{
  //       System.out.println(java.util.Arrays.toString(input));
   //      System.out.println();
 
-       int[] input = {20,5,40,60,10,30,0};
-       sort.insertionSort(input);
+       //int[] input = {20,5,40,60,10,30,0};
+       int[] input = {5,3,2,1,0,7,5,9,8,6};
+//       sort.insertionSort(input);
+       sort.selectionSort(input);
        System.out.println(java.util.Arrays.toString(input));
     }
 
