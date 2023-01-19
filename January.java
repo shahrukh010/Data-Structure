@@ -244,6 +244,25 @@ class Sorting{
                                                                             merge[k++] = b[j];
                                                                         System.out.println(java.util.Arrays.toString(merge));
                                                                     }
+
+
+                                                                    public void insertionSort(int[]input){
+
+
+                                                                        for(int index = 1; index < input.length; index++){
+
+                                                                            int tmp = input[index];
+                                                                            int j = index-1;
+
+                                                                            while(j>=0 && tmp<input[j]){
+
+                                                                                input[j+1] = input[j];
+                                                                                j--;
+                                                                            }
+                                                                            input[j+1] = tmp;
+
+                                                                        }
+                                                                    }
 }
 class Math{
 
@@ -491,6 +510,9 @@ public class January{
  //       System.out.println(java.util.Arrays.toString(input));
   //      System.out.println();
 
+       int[] input = {20,5,40,60,10,30,0};
+       sort.insertionSort(input);
+       System.out.println(java.util.Arrays.toString(input));
     }
 
 }
