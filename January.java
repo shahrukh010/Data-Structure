@@ -337,6 +337,30 @@ class Math{
                             }
                         }
 
+
+                        public void printAllPrime(int n){
+
+                            boolean[] flag = new boolean[n+1];
+
+                            for(int i = 2; i*i <=n; i++){
+
+                                if(isPrime(i)){
+
+                                    int x = 2*i;
+                                    while(x <= n){
+
+                                        flag[x] = true;
+                                        x  = i+x;
+                                    }
+                                }
+                            }
+
+                            for(int index = 2;index<flag.length;index++)
+                                if(!flag[index])
+                                    System.out.print(index+",");
+
+                        }
+
                         //optimze of primeFactor
                         public void primeFactorization(int n){
 
@@ -413,7 +437,9 @@ public class January{
 //         math.primeFactorization(315);
     //         math.primeFactor(315);
         //math.allDivisor(15);
-        math.allDivisor(100);
+//        math.allDivisor(100);
+//        math.printAllPrime(10);
+        math.printAllPrime(23);
          System.out.println();
 
 //        int[] input = {10,4,5,8,11,6,26};
