@@ -195,6 +195,34 @@ class Searching{
                                         return -1;
                                     }
 
+                                    private int binarySearch(int[]input, int low ,int high,int target){
+
+                                        while(low<=high){
+
+                                            int mid = (low + (high - low)/2);
+                                            if(input[mid] == target)return target;
+
+                                            if(input[mid] > target)
+                                                high = mid-1;
+                                            else
+                                                low = mid+1;
+                                        }
+                                        return -1;
+                                    }
+
+                                    public int searchFromInfinit(int[]input,int target){
+
+                                        if(input[0]==target)return target;
+
+                                        int x = 1;
+                                        while(input[x]<target){
+
+                                            x = x*2;
+                                        }
+                                        if(input[x] == target)return target;
+                                        return binarySearch(input,x/2,x-1,target);
+                                    }
+
 }
 
 
@@ -959,10 +987,13 @@ public class January{
 //       int[] input = {80,70,60};
  //      int res = search.peak(input);
   //     System.out.println(res);
-       int[] input = {10,20,40,60,5,8};
-        int res =  search.searchFromSortedRotatedArray(input,40);
-        System.out.println(res);
+//       int[] input = {10,20,40,60,5,8};
+ //       int res =  search.searchFromSortedRotatedArray(input,40);
+  //      System.out.println(res);
 
+       int[] input = {1,10,15,20,40,80,90,100,120,500,Integer.MAX_VALUE};
+        int res = search.searchFromInfinit(input,15);
+        System.out.println(res);
     }
 
 
