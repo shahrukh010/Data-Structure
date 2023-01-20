@@ -82,6 +82,24 @@ class Searching{
        return ans;
        }
 
+
+                                    //it takes O(n3)
+                                    public boolean isTriplet(int[]input,int target){
+
+                                        for(int i = 0; i < input.length-2; i++){
+
+                                            for( int j = i+1; j < input.length-1; j++){
+
+                                                for(int k = j+1; k < input.length; k++){
+
+                                                    int sum = input[i] + input[j] + input[k];
+                                                    if(target == sum)return true;
+                                                }
+                                            }
+                                        }
+                                        return false;
+                                    }
+
 }
 
 
@@ -829,9 +847,12 @@ public class January{
  //      int[] bb = {10,20,30,40,50,60};
 //       int[] aa = {10,20,30,40,50};
 //       int[] bb = {5,15,25,35,45};
-       int[] aa = {1,2,3,4,5,6};
-       int[] bb = {10,20,30,40,50};
-       int res = search.median(aa,bb);
+//       int[] aa = {1,2,3,4,5,6};
+ //      int[] bb = {10,20,30,40,50};
+  //     int res = search.median(aa,bb);
+
+       int[] input = {2,3,4,8,9,20,40};
+       boolean res = search.isTriplet(input,32);
        System.out.println(res);
 //       System.out.println(res);
     }
