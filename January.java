@@ -87,7 +87,6 @@ class Searching{
                                     public boolean isTriplet(int[]input,int target){
 
                                         for(int i = 0; i < input.length-2; i++){
-
                                             for( int j = i+1; j < input.length-1; j++){
 
                                                 for(int k = j+1; k < input.length; k++){
@@ -96,6 +95,32 @@ class Searching{
                                                     if(target == sum)return true;
                                                 }
                                             }
+                                        }
+                                        return false;
+                                    }
+
+                                    //it takes o(nlogn)
+                                    public boolean triplet(int[]input,int target){
+
+                                        for(int index = 0; index < input.length; index++){
+
+                                            int ntf = target - input[index];
+
+                                            int start = index+1;
+                                            int end = input.length-1;
+
+                                            while(start<end){
+
+                                                int sum = input[start] + input[end];
+                                                if(ntf == sum)
+                                                    return true;
+
+                                                if(sum > ntf)
+                                                    end--;
+                                                else
+                                                    start++;
+                                            }
+
                                         }
                                         return false;
                                     }
@@ -852,7 +877,9 @@ public class January{
   //     int res = search.median(aa,bb);
 
        int[] input = {2,3,4,8,9,20,40};
-       boolean res = search.isTriplet(input,32);
+//       int[] input = {1,2,5,6};
+       //boolean res = search.isTriplet(input,32);
+       boolean res = search.triplet(input,69);
        System.out.println(res);
 //       System.out.println(res);
     }
