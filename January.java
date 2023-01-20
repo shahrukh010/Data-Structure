@@ -40,6 +40,48 @@ class Searching{
         return slow;
     }
 
+
+   public int median(int[]a,int []b){
+
+       int i = 0;
+       int j = 0;
+       int m = a.length-1;
+       int n = b.length-1;
+
+       int[] merge = new int[m+n+2];
+       int k = 0;
+
+       while(i<=m && j<=n){
+
+           if(a[i] < b[j])
+               merge[k++] = a[i++];
+           else
+               merge[k++] = b[j++];
+       }
+       for(;i<=m;i++)
+           merge[k++] = a[i];
+       for(;j<=n;j++)
+           merge[k++] = b[j];
+
+       //System.out.println(java.util.Arrays.toString(merge));
+
+       int nn = merge.length;
+       int ans = 0;
+       int mid = 0;
+
+       if(nn%2 !=0){
+
+           mid = nn/2;
+           ans = merge[mid];
+       }
+       else{
+
+           mid = nn/2;
+           ans = ((merge[mid] + merge[mid-1])/2);
+       }
+       return ans;
+       }
+
 }
 
 
@@ -780,10 +822,18 @@ public class January{
 
 
        Searching search = new Searching();
-       int[] input = {1,3,2,4,6,5,7,3};
+//       int[] input = {1,3,2,4,6,5,7,3};
 //       int res = search.repeatElement(input);
-       int res = search.findRepeat(input);
+ //      int res = search.findRepeat(input);
+//       int[] aa = {1,2,3,4,5};
+ //      int[] bb = {10,20,30,40,50,60};
+//       int[] aa = {10,20,30,40,50};
+//       int[] bb = {5,15,25,35,45};
+       int[] aa = {1,2,3,4,5,6};
+       int[] bb = {10,20,30,40,50};
+       int res = search.median(aa,bb);
        System.out.println(res);
+//       System.out.println(res);
     }
 
 
