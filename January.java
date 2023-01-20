@@ -143,6 +143,58 @@ class Searching{
                                         return false;
                                     }
 
+
+                                    public int peak(int[]input){
+
+                                        int low = 0;
+                                        int high = input.length-1;
+
+                                        while(low <= high){
+
+                                            int mid = (low + (high - low)/2);
+
+                                            if(mid==0 || mid==input.length-1
+                                               || input[mid] > input[mid-1] && input[mid]>input[mid+1])
+                                                return input[mid];
+
+                                            if(input[mid] > input[mid+1])
+                                                high = mid-1;
+                                            else
+                                                low = mid+1;
+                                        }
+                                        return -1;
+                                    }
+
+
+                                    public int searchFromSortedRotatedArray(int[]input,int target){
+
+                                        int low = 0;
+                                        int high = input.length-1;
+
+                                        while(low<=high){
+
+                                            int mid = (low +(high - low)/2);
+
+                                            if(input[mid] == target)return target;
+
+                                            if(input[low] < input[mid]){
+
+                                                if(target >=input[low] && target < input[mid])
+                                                    high = mid-1;
+                                                else
+                                                    low = mid+1;
+                                            }
+                                            else{
+                                                if(target > input[mid] && target <= input[high])
+                                                    low = mid+1;
+                                                else
+                                                    high = mid-1;
+
+                                            }
+                                        }
+                                        return -1;
+                                    }
+
 }
 
 
@@ -900,10 +952,16 @@ public class January{
 //       boolean res = search.triplet(input,69);
  //      System.out.println(res);
 //       System.out.println(res);
-       int[] input = {2,4,8,9,11,12,20,30};
-         boolean res = search.isExistPairInSorted(input,51);
-       System.out.println(res);
-        
+//       int[] input = {2,4,8,9,11,12,20,30};
+ //        boolean res = search.isExistPairInSorted(input,51);
+//       int[] input = {5,10,20,15,7};
+       //int[] input = {1,10,20,15,5,23,90,60};
+//       int[] input = {80,70,60};
+ //      int res = search.peak(input);
+  //     System.out.println(res);
+       int[] input = {10,20,40,60,5,8};
+        int res =  search.searchFromSortedRotatedArray(input,40);
+        System.out.println(res);
 
     }
 
