@@ -220,7 +220,32 @@ class Searching{
                                             x = x*2;
                                         }
                                         if(input[x] == target)return target;
-                                        return binarySearch(input,x/2,x-1,target);
+                                        return binarySearch(input,x/2+1,x,target);
+                                    }
+
+
+                                    public int squareRoot(int n){
+
+                                        int low = 0;
+                                        int high = n;
+                                        int ans = 0;
+
+                                        while(low < high){
+
+                                            int mid = ((low+high)/2);
+                                            int msq = mid*mid;
+
+                                            if(msq == n)return mid;
+
+                                            if(msq > n){
+                                                high = mid-1;
+                                            }
+                                            else{
+                                                ans = mid;
+                                                low = mid+1;
+                                            }
+                                        }
+                                        return ans;
                                     }
 
 }
@@ -991,8 +1016,13 @@ public class January{
  //       int res =  search.searchFromSortedRotatedArray(input,40);
   //      System.out.println(res);
 
-       int[] input = {1,10,15,20,40,80,90,100,120,500,Integer.MAX_VALUE};
-        int res = search.searchFromInfinit(input,15);
+ //      int[] input = {1,10,15,20,40,80,90,100,120,500,Integer.MAX_VALUE};
+//        int res = search.searchFromInfinit(input,120);
+       //int res = search.squareRoot(14);
+       //int res = search.squareRoot(25);
+       //int res = search.squareRoot(4);
+       //int res = search.squareRoot(15);
+       int res = search.squareRoot(10);
         System.out.println(res);
     }
 
