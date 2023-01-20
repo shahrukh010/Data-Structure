@@ -590,6 +590,20 @@ class Array extends Sorting{
                         swap(input,i++,j--);
                     }
                 }
+
+                //without modify array it takes o(n)s(1)
+                public void removeDuplicate(int[]input){
+
+                    int i = 0;
+
+                    for(int j = 1; j < input.length; j++){
+
+                        if(input[j] !=input[j-1]){
+                            input[i+1] = input[j];
+                            i++;
+                        }
+                    }
+                }
 }
         
 public class January{
@@ -703,12 +717,17 @@ public class January{
        //int[] input = {40,8,50,100};
        //int res = array.largeElement(input);
        //int[] input = {20,10,20,8};
-       int[] input = {5,20,12,20,8};
-       int res = array.secondLarge(input);
+  //     int[] input = {5,20,12,20,8};
+   //    int res = array.secondLarge(input);
 //       System.out.println(res);
 
-       array.reverse(input);
-       System.out.println(java.util.Arrays.toString(input));
+ //      array.reverse(input);
+//       System.out.println(java.util.Arrays.toString(input));
+
+       //int[] input = {10,20,20,30,30,30};
+       int[] input = {10,20,20,30,30,30,40};
+       array.removeDuplicate(input);
+       System.out.println(java.util.Arrays.toString(java.util.Arrays.copyOfRange(input,0,4)));
     }
 
 
