@@ -1,4 +1,49 @@
 
+
+class Searching{
+
+
+
+    //it takes O(n2)but not modifying array
+    //you can use nlogn also just sort array
+    //or you can use hashtable also but it takes o(n)s(n)
+    public int repeatElement(int[]input){
+
+        for(int index = 0; index < input.length; index++){
+
+            for(int j = index+1; j < input.length; j++){
+
+                if(input[index]==input[j])return input[index];
+        }
+    }
+    return -1;
+    }
+
+    //it take o(n)without modifying array
+    public int findRepeat(int[]input){
+
+        int slow = input[0];
+        int fast = input[0];
+
+        do{
+            slow = input[slow];
+            fast = input[input[fast]];
+        }while(slow !=fast);
+        
+        slow = input[0];
+
+        while(slow !=fast){
+
+            slow = input[slow];
+            fast = input[fast];
+        }
+        return slow;
+    }
+
+}
+
+
+
 class Sorting{
 
 
@@ -725,9 +770,20 @@ public class January{
 //       System.out.println(java.util.Arrays.toString(input));
 
        //int[] input = {10,20,20,30,30,30};
-       int[] input = {10,20,20,30,30,30,40};
-       array.removeDuplicate(input);
-       System.out.println(java.util.Arrays.toString(java.util.Arrays.copyOfRange(input,0,4)));
+  //     int[] input = {10,20,20,30,30,30,40};
+//       array.removeDuplicate(input);
+ //      System.out.println(java.util.Arrays.toString(java.util.Arrays.copyOfRange(input,0,4)));
+
+
+
+
+
+
+       Searching search = new Searching();
+       int[] input = {1,3,2,4,6,5,7,3};
+//       int res = search.repeatElement(input);
+       int res = search.findRepeat(input);
+       System.out.println(res);
     }
 
 
