@@ -125,6 +125,24 @@ class Searching{
                                         return false;
                                     }
 
+
+                                    public boolean isExistPairInSorted(int[]input,int target){
+
+                                        int start = 0;
+                                        int end = input.length-1;
+
+                                        while(start < end){
+
+                                            int sum = input[start]+input[end];
+                                            if(target == sum)return true;
+
+                                            if(sum > target)end--;
+                                            else
+                                                start++;
+                                        }
+                                        return false;
+                                    }
+
 }
 
 
@@ -876,12 +894,17 @@ public class January{
  //      int[] bb = {10,20,30,40,50};
   //     int res = search.median(aa,bb);
 
-       int[] input = {2,3,4,8,9,20,40};
+//       int[] input = {2,3,4,8,9,20,40};
 //       int[] input = {1,2,5,6};
        //boolean res = search.isTriplet(input,32);
-       boolean res = search.triplet(input,69);
-       System.out.println(res);
+//       boolean res = search.triplet(input,69);
+ //      System.out.println(res);
 //       System.out.println(res);
+       int[] input = {2,4,8,9,11,12,20,30};
+         boolean res = search.isExistPairInSorted(input,51);
+       System.out.println(res);
+        
+
     }
 
 
