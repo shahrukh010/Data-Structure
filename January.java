@@ -2,7 +2,7 @@
 class Sorting{
 
 
-    private void swap(int[]input,int i, int j){
+    protected void swap(int[]input,int i, int j){
 
         int tmp = input[i];
         input[i] = input[j];
@@ -544,6 +544,53 @@ class Math{
 
 
 }
+
+
+
+class Array extends Sorting{
+
+
+                public int largeElement(int[]input){
+
+                    int res = 0;
+                    for(int i=0; i < input.length; i++){
+                        res = java.lang.Math.max(input[i],res);
+                    }
+                    return res;
+                }
+
+                public int secondLarge(int[]input){
+
+                    int res = -1;
+                    int lg = 0;
+                    
+                    for(int i = 1; i < input.length; i++){
+
+                        if(input[i] > input[lg]){
+                            res = lg;//it point to second large element till now
+                            lg = i;
+                        }
+                        else{
+                            if(input[i]!=input[lg]){
+
+                                if(res == -1 || input[i] > input[res])
+                                    res = i;
+                            }
+                        }
+                    }
+                    return input[res];
+                }
+
+                public void reverse(int[]input){
+
+                    int i =0;
+                    int j = input.length-1;
+                    while(i<j){
+
+                        swap(input,i++,j--);
+                    }
+                }
+}
         
 public class January{
 
@@ -639,9 +686,30 @@ public class January{
 //       int[] input = {15,14,13,12};
 //                  sort.segrateAllNegativeLeft(input);
 //                    sort.segrateEvenOdd(input);
-       int[] input = {0,1,1,0,1,0,1};
-                    sort.segrateZero(input);
+//       int[] input = {0,1,1,0,1,0,1};
+ //                   sort.segrateZero(input);
+  //     System.out.println(java.util.Arrays.toString(input));
+
+
+
+
+
+
+       System.out.println("==============================");
+       System.out.println("==============================");
+       System.out.println("==============================");
+       Array array = new Array();
+       //int[] input = {10,5,20,8};
+       //int[] input = {40,8,50,100};
+       //int res = array.largeElement(input);
+       //int[] input = {20,10,20,8};
+       int[] input = {5,20,12,20,8};
+       int res = array.secondLarge(input);
+//       System.out.println(res);
+
+       array.reverse(input);
        System.out.println(java.util.Arrays.toString(input));
     }
+
 
 }
