@@ -391,6 +391,35 @@ public class Sort {
 
 
 
+            public int[][] mergeInterval(int[][]interval){
+
+
+                java.util.List<int[]> res = new java.util.ArrayList<>();
+
+                if(interval == null || interval.length==0)return interval;
+
+                java.util.Arrays.sort(interval,(a,b)->(a[0] - b[0]));
+
+                int start = interval[0][0];
+                int end = interval[0][1];
+
+                for(int[] inv : interval){
+
+                    if(inv[0]<=end)
+                        end = Math.max(end,inv[1]);
+
+                    else{
+                        res.add(new int[]{start,end});
+                        start = inv[0];
+                        end  = inv[1];
+                    }
+                }
+                res.add(new int[]{start,end});
+                return res.toArray(new int[0][]);
+            }
+
+
+
     private void swap(int[]input, int i, int j){
 
         int tmp = input[i];

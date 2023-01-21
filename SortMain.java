@@ -75,10 +75,22 @@ public class SortMain {
           
          // System.out.println(res);
 
-          int[] input = {0,1,2,1,0,1,2,0,2};
-          sort.sort1s2s(input);
-          System.out.println(java.util.Arrays.toString(input));
+//          int[] input = {0,1,2,1,0,1,2,0,2};
+ //         sort.sort1s2s(input);
+  //        System.out.println(java.util.Arrays.toString(input));
+
+         // int[][] intervals = {{1,3,},{2,6},{8,10}};
+//          int[][] intervals = {{1,3},{2,4},{5,7},{6,8}};
+          int[][] intervals = {{7,9},{6,10},{4,5},{1,3},{2,4}};
+        
+         int[][] res = sort.mergeInterval(intervals);
+
+         for(int[] result : res)
+             System.out.print(java.util.Arrays.toString(result));
+
+         System.out.println();
     }
+    
 }
 
 
