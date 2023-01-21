@@ -361,6 +361,34 @@ public class Sort {
             }
 
 
+            public void sort1s2s(int[]input){
+
+                int left = 0;
+                int high = input.length-1;
+                int mid = 0;
+                while(mid<=high){
+                    
+                    switch(input[mid]){
+
+                        case 0:
+                            if(mid !=left)
+                                swap(input,mid,left);
+                            mid++;
+                            left++;
+                            break;
+                       case 1:
+                            mid++;
+                            break;
+
+                        case 2:
+                            swap(input,mid,high);
+                            high--;
+                            break;
+                    }
+
+                }
+            }
+
 
 
     private void swap(int[]input, int i, int j){

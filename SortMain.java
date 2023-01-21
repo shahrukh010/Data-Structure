@@ -70,9 +70,14 @@ public class SortMain {
           //System.out.println(java.util.Arrays.toString(input));
           //int[] input = {30,20,5,10,8};
 //          int[] input = {10,4,5,8,11,6,26};
-          int[] input = {10,5,30,12};
-          int res = sort.kthSmallestElement(input,2);
-          System.out.println(res);
+//          int[] input = {10,5,30,12};
+ //         int res = sort.kthSmallestElement(input,2);
+          
+         // System.out.println(res);
+
+          int[] input = {0,1,2,1,0,1,2,0,2};
+          sort.sort1s2s(input);
+          System.out.println(java.util.Arrays.toString(input));
     }
 }
 
