@@ -96,4 +96,32 @@ public class Matrix{
             System.out.println();
         }
     }
+
+
+    public void spiral(int[][]input){
+
+        int top = 0;int bottom = input.length-1;
+        int left = 0; int right = input[0].length-1;
+
+        while(top<=right && left<=right){
+
+        for(int i = left; i <=right; i++)
+            System.out.print(input[top][i]+",");
+        top++;
+
+        for(int i = top; i <=bottom;i++)
+            System.out.print(input[i][right]+",");
+        right--;
+
+        if(top<=bottom)
+            for(int i = right; i>=left;i--)
+                System.out.print(input[bottom][i]+",");
+            bottom--;
+
+        if(left<=right)
+            for(int i = bottom;i>=top;i--)
+                System.out.print(input[i][left]+",");
+           left++;
+        }
+    }
 }
