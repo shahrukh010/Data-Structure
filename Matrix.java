@@ -68,4 +68,19 @@ public class Matrix{
                 System.out.print(input[index][0]+",");
         }
     }
+
+
+
+
+    public void transpose(int[][]input){
+
+        for(int i = 0; i < input.length; i++){
+
+            for(int j = 0; j < input.length;j++){
+
+                System.out.print(input[j][i]+",");
+            }
+            System.out.println();
+        }
+    }
 }
