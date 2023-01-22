@@ -21,9 +21,12 @@ public class MatrixMain {
 
  //       matrix.rotate90(input);
 
-        int[][] input = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
-
-        matrix.spiral(input);
+        //int[][] input = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+        int[][] input = {{1,3,5,7},{10,11,16,20},{23,30,34,50}};
+        //matrix.spiral(input);
+        //
+    boolean res = matrix.searchFromSortedMatrix(input,34);
+        System.out.println(res);
     }
 
 }

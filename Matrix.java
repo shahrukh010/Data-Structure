@@ -124,4 +124,29 @@ public class Matrix{
            left++;
         }
     }
+
+
+    public boolean searchFromSortedMatrix(int[][]input,int target){
+
+        int low = 0;
+        int r = input[0].length;
+        int high = ((input.length * input[0].length)-1);
+
+        while(low <= high){
+
+            //int mid = (low + high)/2;
+            int mid = (low + (high - low)/2);
+
+            int col = mid / r;
+            int row = mid % r;
+
+            if(input[col][row] == target)return true;
+
+            if(input[col][row] < target)
+                low = mid+1;
+            else
+                high = mid-1;
+        }
+        return false;
+    }
 }
