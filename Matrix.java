@@ -149,4 +149,42 @@ public class Matrix{
         }
         return false;
     }
+
+
+    public int medianFromMatrix(int[][]input){
+
+        //using binary search
+        
+        int r = input.length;
+        int c = input[0].length;
+        int min = input[0][0];
+        int max = input[0][c-1];
+        
+
+        for(int i= 1; i < r; i++){
+            min = Math.min(input[i][0],min);
+            max = Math.max(input[i][c-1],max);
+        }
+
+        int medPos = ((r * c+1)/2);
+
+        while(min < max){
+
+            int mid = ((min + max)/2);
+
+            int midPos = 0;
+
+            for(int i = 0; i < r; i++){
+
+                int pos = java.util.Arrays.binarySearch(input[i],mid)+1;
+                midPos +=Math.abs(pos);
+            }
+
+            if(midPos < medPos)
+                min = mid+1;
+            else
+                max = mid;
+        }
+        return min;
+    }
 }
