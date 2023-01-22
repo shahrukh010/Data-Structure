@@ -83,4 +83,17 @@ public class Matrix{
             System.out.println();
         }
     }
+
+
+    public void rotate90(int[][]input){
+
+        for(int c = input[0].length-1; c>=0; c--){
+
+            for(int r = 0; r < input.length; r++){
+
+                System.out.print(input[r][c]+",");
+            }
+            System.out.println();
+        }
+    }
 }
