@@ -402,6 +402,38 @@ class Searching{
                                         return ans;
                                     }
 
+                                    private int firstOccurenceIndex(int[]input){
+
+                                        int low = 0;
+                                        int high = input.length;
+
+                                        while( low < high){
+                                            
+                                            int mid = (low + ( high - low)/2);
+
+                                            if(input[mid]==1){
+
+                                                if(mid ==0 || input[mid-1] !=1)
+                                                    return mid;
+                                                high = mid-1;
+                                            }
+
+                                            else
+                                                low = mid+1;
+                                        }
+                                        return -1;
+                                    }
+
+
+                                    public int count1s(int[]input){
+
+                                        
+                                        int n = input.length;
+                                        int index =  firstOccurenceIndex(input); 
+
+                                        return index !=-1 ? n - index : 0;
+                                    }
+
 }
 
 
@@ -1226,11 +1258,20 @@ public class January{
  //      boolean res = matrix.searchFromMatrix(input,50);
   //     System.out.println(res);
 
+       /*
        int[][] input = {{1,3,},{2,4},{5,7},{6,8}};
        int[][] res = sort.mergeOverlapping(input);
 
        for(int[] r : res)
            System.out.println(java.util.Arrays.toString(r));
+
+       */
+        
+       //int[] input = {0,0,0,1,1,1,};
+       //int[] input = {0,1,1,1,1,1,};
+       int[] input = {0,0,1};
+       int res = search.count1s(input);
+       System.out.println(res);
     }
 
 
