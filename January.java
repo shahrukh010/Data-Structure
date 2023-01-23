@@ -2,6 +2,37 @@
 
 class Matrix{
 
+    public void spiralTraversal(int[][]input){
+
+        int top =0;
+        int bottom = input.length-1;
+        int right = input[0].length-1;
+        int left = 0;
+
+        while(top <= bottom && left <=right){
+
+            for(int i = left; i <=right; i++)
+                System.out.print(input[top][i]+",");
+            top++;
+
+            for(int i = top; i <=bottom; i++)
+                System.out.print(input[i][right]+",");
+            right--;
+
+            if(top<=bottom){
+
+                for(int i = right;i>=left;i--)
+                    System.out.print(input[bottom][i]+",");//start from right-1 because of right is already printed
+                bottom--;
+            }
+
+            if(left <= right){
+                for(int i = bottom; i>=top; i--)
+                    System.out.print(input[i][left]+",");
+                left++;
+            }
+        }
+    }
     public int medianFromMatrix(int[][]input){
 
         int r = input.length;
@@ -1065,9 +1096,11 @@ public class January{
 
 
        Matrix matrix = new Matrix();
-       int[][] input = {{1,10,20},{15,25,35},{5,30,40}};
-       int res = matrix.medianFromMatrix(input);
-       System.out.println(res);
+      // int[][] input = {{1,10,20},{15,25,35},{5,30,40}};
+       //int res = matrix.medianFromMatrix(input);
+       //System.out.println(res);
+       int[][] input = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+       matrix.spiralTraversal(input);
     }
 
 
