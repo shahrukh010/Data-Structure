@@ -3,6 +3,30 @@
 class Matrix{
 
 
+    public void boundaryTraversal(int[][]input){
+
+        int top = 0;
+        int bottom = input.length-1;
+        int left = 0;
+        int right = input[0].length-1;
+
+
+        for(int i = left; i <=right; i++)
+            System.out.print(input[top][i]+",");
+        top++;
+
+        for(int i=top;i<=bottom;i++)
+            System.out.print(input[i][right]+",");
+        right--;
+
+        for(int i = right;i>=left;i--)
+            System.out.print(input[bottom][i]+",");
+        bottom--;
+
+        for(int i = bottom; i>=top;i--)
+            System.out.print(input[i][left]+" ");
+    }
+
     public void transpose(int[][]input){
 
         int r = input.length;
@@ -1134,7 +1158,10 @@ public class January{
  //       matrix.rotate90(input);
 
        int[][] input = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
-       matrix.transpose(input);
+ //      matrix.transpose(input);
+
+       matrix.boundaryTraversal(input);
+       
     }
 
 
