@@ -2,6 +2,20 @@
 
 class Matrix{
 
+
+    public void rotate90(int[][]input){
+
+        int r = input.length;
+        int c = input[0].length-1;
+
+        for(int col = c; col >=0 ; col--){
+
+            for(int row = 0; row < r; row++)
+                System.out.print(input[row][col]+",");
+        System.out.println();
+        }
+
+    }
     public void spiralTraversal(int[][]input){
 
         int top =0;
@@ -1099,8 +1113,12 @@ public class January{
       // int[][] input = {{1,10,20},{15,25,35},{5,30,40}};
        //int res = matrix.medianFromMatrix(input);
        //System.out.println(res);
+ //      int[][] input = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+//       matrix.spiralTraversal(input);
+
+//       int[][] input = {{1,2,3},{4,5,6},{7,8,9}};
        int[][] input = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
-       matrix.spiralTraversal(input);
+        matrix.rotate90(input);
     }
 
 
