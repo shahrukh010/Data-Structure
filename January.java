@@ -3,6 +3,25 @@
 class Matrix{
 
 
+    public boolean searchFromMatrix(int[][]input,int target){
+
+
+        int i = 0;
+        int r = input.length;
+        int j = input[0].length-1;
+
+        while(i < r && j >=0 ){
+
+            if(input[i][j] == target)return true;
+
+            if(input[i][j] > target)j--;
+            else
+                i++;
+        }
+
+        return false;
+    }
+
     public void sneakPattern(int[][]input){
 
         int r = input.length;
@@ -1178,8 +1197,13 @@ public class January{
  //      matrix.transpose(input);
 
  //      matrix.boundaryTraversal(input);
-       int[][] input = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
-       matrix.sneakPattern(input);
+//       int[][] input = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+ //      matrix.sneakPattern(input);
+
+       int[][] input = {{10,20,30,40},{15,25,35,45},{27,29,37,48},{32,33,39,50}};
+//       int[][] input = {{10,20},{12,30}};
+       boolean res = matrix.searchFromMatrix(input,50);
+       System.out.println(res);
     }
 
 
