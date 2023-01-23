@@ -3,6 +3,21 @@
 class Matrix{
 
 
+    public void sneakPattern(int[][]input){
+
+        int r = input.length;
+        int c = input[0].length-1;
+
+        for(int i = 0; i < r ; i++)
+            if(i % 2 == 0)
+                for(int j = 0; j < r; j++)
+                    System.out.print(input[i][j]+",");
+            else
+                for(int j = c; j>=0;j--)
+                    System.out.print(input[i][j]+",");
+    }
+
+
     public void boundaryTraversal(int[][]input){
 
         int top = 0;
@@ -1159,11 +1174,12 @@ public class January{
 
 //       int[][] input = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
 
-        int[][] input = {{1,2,3,4},{5,6,7,8}};
+//        int[][] input = {{1,2,3,4},{5,6,7,8}};
  //      matrix.transpose(input);
 
-       matrix.boundaryTraversal(input);
-       
+ //      matrix.boundaryTraversal(input);
+       int[][] input = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+       matrix.sneakPattern(input);
     }
 
 
