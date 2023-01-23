@@ -409,6 +409,27 @@ class Searching{
 class Sorting{
 
 
+
+    public int[][] mergeOverlapping(int[][]input){
+
+        java.util.List<int[]> res = new java.util.ArrayList<>();
+        int start = input[0][0];
+        int end = input[0][1];
+
+        for(int[] inv : input){
+
+            if(inv[0]<=end){
+                end = java.lang.Math.max(end,inv[1]);
+            }
+            else{
+                res.add(new int[]{start,end});
+                start = inv[0];
+                end = inv[1];
+            }
+        }
+        res.add(new int[]{start,end});
+        return res.toArray(new int[0][]);
+    }
     protected void swap(int[]input,int i, int j){
 
         int tmp = input[i];
@@ -1200,10 +1221,16 @@ public class January{
 //       int[][] input = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
  //      matrix.sneakPattern(input);
 
-       int[][] input = {{10,20,30,40},{15,25,35,45},{27,29,37,48},{32,33,39,50}};
+//       int[][] input = {{10,20,30,40},{15,25,35,45},{27,29,37,48},{32,33,39,50}};
 //       int[][] input = {{10,20},{12,30}};
-       boolean res = matrix.searchFromMatrix(input,50);
-       System.out.println(res);
+ //      boolean res = matrix.searchFromMatrix(input,50);
+  //     System.out.println(res);
+
+       int[][] input = {{1,3,},{2,4},{5,7},{6,8}};
+       int[][] res = sort.mergeOverlapping(input);
+
+       for(int[] r : res)
+           System.out.println(java.util.Arrays.toString(r));
     }
 
 
