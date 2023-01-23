@@ -3,6 +3,19 @@
 class Matrix{
 
 
+    public void transpose(int[][]input){
+
+        int r = input.length;
+        int c = input[0].length;
+
+        for(int i = 0; i < c; i++){
+
+            for(int j = 0; j < r; j++)
+                System.out.print(input[j][i]+",");
+            System.out.println();
+        }
+    }
+
     public void rotate90(int[][]input){
 
         int r = input.length;
@@ -1117,8 +1130,11 @@ public class January{
 //       matrix.spiralTraversal(input);
 
 //       int[][] input = {{1,2,3},{4,5,6},{7,8,9}};
+//       int[][] input = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+ //       matrix.rotate90(input);
+
        int[][] input = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
-        matrix.rotate90(input);
+       matrix.transpose(input);
     }
 
 
