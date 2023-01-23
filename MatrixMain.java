@@ -26,7 +26,7 @@ public class MatrixMain {
         int[][] input = {{10,20,30,40},{15,23,35,45},{27,29,37,48},{32,33,39,50}};
         //matrix.spiral(input);
         //
-    boolean res = matrix.searchFromSortedMatrix(input,33);
+    boolean res = matrix.searchFromSortedMatrix(input,37);
         System.out.println(res);
 
 //        int[][] input = {{ 5, 10, 20, 30, 40 }, { 1, 2, 3, 4,6 }, { 11, 13, 15, 17, 19 }};

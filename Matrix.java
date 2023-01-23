@@ -128,24 +128,18 @@ public class Matrix{
 
     public boolean searchFromSortedMatrix(int[][]input,int target){
 
-        int low = 0;
-        int r = input[0].length;
-        int high = ((input.length * input[0].length));
 
-        while(low < high){
+        int i = 0;
+        int j = input[0].length-1;
+        int R = input.length;
 
-            int mid = (low + high)/2;
-//            int mid = (low + (high - low)/2);
+        while(i< R && j>=0){
 
-            int col = mid / r;
-            int row = mid % r;
+            if(input[i][j] == target)return true;
 
-            if(input[col][row] == target)return true;
-
-            if(input[col][row] < target)
-                low = low+1;
+            if(input[i][j] > target)j--;
             else
-                high = high-1;
+                i++;
         }
         return false;
     }
