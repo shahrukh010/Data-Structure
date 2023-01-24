@@ -480,6 +480,27 @@ class Searching{
                                         }
                                         return -1;
                                     }*/
+
+
+                                    public boolean binarySearch(int[]input,int target){
+
+                                        int low = 0;
+                                        int high = input.length-1;
+
+                                        while(low <= high){
+
+                                            int mid = (low + (high - low)/2);
+
+                                            if(input[mid] == target)
+                                                return true;
+
+                                            if(input[mid] > target)
+                                                high = mid-1;
+                                            else
+                                                low = mid+1;
+                                        }
+                                        return false;
+                                    }
 }
 
 
@@ -1317,8 +1338,11 @@ public class January{
        //int[] input = {0,1,1,1,1,1,};
 //       int[] input = {0,0,1};
  //      int res = search.count1s(input);
-       int input[] = {10,20,20,20,30,30};
-       int res = search.lastIndex(input,30);
+       int input[] = {10,20,20,20,30,30,50};
+//       int res = search.lastIndex(input,30);
+ //      System.out.println(res);
+
+       boolean res = search.binarySearch(input,100);
        System.out.println(res);
     }
 
