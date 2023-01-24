@@ -434,6 +434,52 @@ class Searching{
                                         return index !=-1 ? n - index : 0;
                                     }
 
+                                    public int lastIndex(int[]input,int target){
+
+                                        int low = 0;
+                                        int high = input.length-1;
+
+                                        while(low <= high){
+
+                                            int mid = ((low + high)/2);//(low + (high - low)/2);
+                                            
+                                            if(input[mid]==target){
+                                                if(mid == input.length-1 || input[mid] !=input[mid+1])
+                                                    return mid;
+                                                low = mid+1;
+                                            }
+                                            else if(input[mid] > target)
+                                                high = mid-1;
+
+                                            else
+                                                low = mid+1;
+                                        }
+                                        return -1;
+                                    }
+
+
+                                    /*
+                                    public int lastIndex(int[]input,int target){
+
+                                        int low = 0;
+                                        int high = input.length-1;
+                                        
+                                        while(low<=high){
+
+                                            int mid = ((low + high)/2);
+
+                                            if(input[mid] < target)
+                                                low = mid+1;
+                                            else if(input[mid]> target)
+                                                high = mid-1;
+                                            else
+                                                if(mid == input.length-1 || input[mid] !=input[mid+1])
+                                                    return mid;
+                                                else
+                                                    low = mid+1;
+                                        }
+                                        return -1;
+                                    }*/
 }
 
 
@@ -1269,8 +1315,10 @@ public class January{
         
        //int[] input = {0,0,0,1,1,1,};
        //int[] input = {0,1,1,1,1,1,};
-       int[] input = {0,0,1};
-       int res = search.count1s(input);
+//       int[] input = {0,0,1};
+ //      int res = search.count1s(input);
+       int input[] = {10,20,20,20,30,30};
+       int res = search.lastIndex(input,10);
        System.out.println(res);
     }
 
