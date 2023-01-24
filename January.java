@@ -441,8 +441,8 @@ class Searching{
 
                                         while(low <= high){
 
-                                            int mid = ((low + high)/2);//(low + (high - low)/2);
-                                            
+                                            //int mid = ((low + high)/2);//(low + (high - low)/2);
+                                            int mid = (low + (high - low)/2);
                                             if(input[mid]==target){
                                                 if(mid == input.length-1 || input[mid] !=input[mid+1])
                                                     return mid;
@@ -1318,7 +1318,7 @@ public class January{
 //       int[] input = {0,0,1};
  //      int res = search.count1s(input);
        int input[] = {10,20,20,20,30,30};
-       int res = search.lastIndex(input,10);
+       int res = search.lastIndex(input,30);
        System.out.println(res);
     }
 
