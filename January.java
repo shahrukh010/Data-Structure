@@ -4,6 +4,21 @@
 class Arrays{
 
 
+    public int kthMaxSum(int[]input,int k){
+
+        int res = 0;
+        for(int index = 0; index+k-1<input.length;index++){
+
+            int sum = 0;
+            for(int j = 0; j < k; j++){
+
+                sum +=input[index+j];
+            }
+            res = java.lang.Math.max(res,sum);
+        }
+        return res;
+    }
+
 
     public boolean isTargetExists(int[]input,int target){
 
@@ -1452,13 +1467,17 @@ public class January{
        //boolean res = arrays.findEquilibrium(input);
        //System.out.println(res);
 
-       int[] input = {1,4,20,3,10,5};
+   //    int[] input = {1,4,20,3,10,5};
 //       int[] input = {1,4,0,0,3,10,5};
-        boolean res = arrays.isSumExists(input,1);    
-        System.out.println(res);
+  //      boolean res = arrays.isSumExists(input,1);    
+ //       System.out.println(res);
 //        boolean res = arrays.isTargetExists(input,11);
-        System.out.println(res);
+//        System.out.println(res);
 
+//       int[] input = {1,8,30,-5,20,7};
+       int[] input = {5,-10,6,90,3};
+       int res = arrays.kthMaxSum(input,2);
+       System.out.println(res);
     }
 
 
