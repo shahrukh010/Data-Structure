@@ -1,5 +1,30 @@
 
 
+
+class Arrays{
+
+
+    public int maxAppearElement(int[]left,int[]right){
+
+        int[] freq = new int[left.length + right.length+2];
+
+        for(int i = 0; i<left.length;i++){
+
+            for(int j = left[i]; j <=right[i]; j++){
+
+                freq[j] +=1;
+            }
+        }
+
+        int res = 0;
+
+        for(int i=0;i<freq.length;i++)
+            if(freq[i]>res)
+                res = i;
+    return res;
+    }
+}
+
 class Matrix{
 
 
@@ -1338,12 +1363,24 @@ public class January{
        //int[] input = {0,1,1,1,1,1,};
 //       int[] input = {0,0,1};
  //      int res = search.count1s(input);
-       int input[] = {10,20,20,20,30,30,50};
+//       int input[] = {10,20,20,20,30,30,50};
 //       int res = search.lastIndex(input,30);
  //      System.out.println(res);
 
-       boolean res = search.binarySearch(input,100);
+ //      boolean res = search.binarySearch(input,100);
+  //     System.out.println(res);
+
+
+       Arrays arrays = new Arrays();
+
+//       int[] left = {1,2,4};
+ //      int[] right= {4,5,7};
+
+       int[] left = {1,2,5,15};
+       int[] right = {5,8,7,8};
+       int res = arrays.maxAppearElement(left,right);
        System.out.println(res);
+
     }
 
 
