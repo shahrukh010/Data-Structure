@@ -4,6 +4,71 @@
 class Arrays{
 
 
+
+    public boolean isTargetExists(int[]input,int target){
+
+        java.util.Arrays.sort(input);
+
+        for(int i = 0; i < input.length; i++){
+
+            int ntf = target - input[i];
+
+            int start = i+1;
+            int end = input.length-1;
+            while(start<end){
+                
+                 int sum = input[start] + input[end];
+
+                if(sum==ntf)return true;
+
+                if(sum > ntf)end--;
+
+                else
+                    start++;
+            }
+        }
+        return false;
+    }
+
+    //it takes (n2)
+    public boolean isSumExists(int[]input,int target){
+
+        int res = 0;
+        for(int i = 0; i < input.length; i++){
+
+            res = 0;
+            for(int j = i; j < input.length; j++){
+
+                res += input[j];
+
+                if(res==target)return true;
+            }
+        }
+
+    return false;
+    }
+
+    public boolean findEquilibrium(int[]input){
+
+        int[] prefixSum = new int[input.length];
+        prefixSum[0] = input[0];
+
+        for(int i = 1; i < input.length;i++)
+            prefixSum[i] = prefixSum[i-1] + input[i];
+
+        int total = prefixSum[prefixSum.length-1];
+
+        for(int i = 0; i < input.length;i++){
+
+            int left = total - prefixSum[i];
+            int right= prefixSum[i] - input[i];
+
+            if(left == right)return true;
+        }
+        return false;
+
+    }
+
     public int maxAppearElement(int[]left,int[]right){
 
         int[] freq = new int[left.length + right.length+2];
@@ -1376,10 +1441,23 @@ public class January{
 //       int[] left = {1,2,4};
  //      int[] right= {4,5,7};
 
-       int[] left = {1,2,5,15};
-       int[] right = {5,8,7,8};
-       int res = arrays.maxAppearElement(left,right);
-       System.out.println(res);
+//       int[] left = {1,2,5,15};
+//       int[] right = {5,8,7,8};
+//       int res = arrays.maxAppearElement(left,right);
+//       System.out.println(res);
+
+//       int[] input = {3,4,8,-9,20,6};
+         //int[] input = {4,2,-2};
+       //  int[] input = {4,2,2};
+       //boolean res = arrays.findEquilibrium(input);
+       //System.out.println(res);
+
+       int[] input = {1,4,20,3,10,5};
+//       int[] input = {1,4,0,0,3,10,5};
+        boolean res = arrays.isSumExists(input,1);    
+        System.out.println(res);
+//        boolean res = arrays.isTargetExists(input,11);
+        System.out.println(res);
 
     }
 
