@@ -4,6 +4,22 @@
 class Arrays{
 
 
+    public void maxGroupFlip(int[]input){
+
+        for(int index = 1; index < input.length; index++){
+
+            if(input[index] !=input[index-1]){
+
+                if(input[index] !=input[0])//because of we want last index also which is present index -1 
+                    System.out.print("["+index+",");
+                else
+                    System.out.print(index-1+"]");
+            }
+        }
+        if(input[input.length-1] !=input[0])
+            System.out.print(input[input.length-1]+"]");
+    }
+
     public int kthMaximumSum(int[]input, int k){
 
         int current_sum = 0;
@@ -1490,11 +1506,15 @@ public class January{
 //        boolean res = arrays.isTargetExists(input,11);
 //        System.out.println(res);
 
-       int[] input = {1,8,30,-5,20,7};
+ //      int[] input = {1,8,30,-5,20,7};
 //       int[] input = {5,-10,6,90,3};
 //       int res = arrays.kthMaxSum(input,2);
-       int res = arrays.kthMaximumSum(input,4);
-       System.out.println(res);
+//       int res = arrays.kthMaximumSum(input,4);
+  //     System.out.println(res);
+
+       //int[] input = {1,1,0,0,0,1};
+       int[] input = {1,0,0,0,1,0,0,1,1,1,1};
+       arrays.maxGroupFlip(input);
     }
 
 
