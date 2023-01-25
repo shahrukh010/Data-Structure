@@ -4,6 +4,22 @@
 class Arrays{
 
 
+    public int kthMaximumSum(int[]input, int k){
+
+        int current_sum = 0;
+        for(int index = 0; index < k ; index++){
+            current_sum +=input[index];
+        }
+
+        int res = current_sum;
+        for(int index = k; index < input.length; index++){
+
+            current_sum +=input[index] - input[index - k]; 
+            res = java.lang.Math.max(res,current_sum);
+        }
+        return res;
+    }
+    //it takes (n2)
     public int kthMaxSum(int[]input,int k){
 
         int res = 0;
@@ -1474,9 +1490,10 @@ public class January{
 //        boolean res = arrays.isTargetExists(input,11);
 //        System.out.println(res);
 
-//       int[] input = {1,8,30,-5,20,7};
-       int[] input = {5,-10,6,90,3};
-       int res = arrays.kthMaxSum(input,2);
+       int[] input = {1,8,30,-5,20,7};
+//       int[] input = {5,-10,6,90,3};
+//       int res = arrays.kthMaxSum(input,2);
+       int res = arrays.kthMaximumSum(input,4);
        System.out.println(res);
     }
 
