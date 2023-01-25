@@ -4,6 +4,59 @@
 class Arrays{
 
 
+    private int getCandidate(int[]input){
+
+        int candidate = input[0];
+        int count = 1;
+
+        for(int index = 0; index < input.length; index++){
+
+            if(input[index] == candidate)
+                count++;
+            else
+            {
+                count--;
+                if(count == 0){
+                    count = 1;
+                    candidate = input[index];
+                }
+            }
+        }
+        return candidate;
+    }
+
+    public int getMajority(int[]input){
+
+        int candidate = getCandidate(input);
+
+        int count = 1;
+        for(int index = 0; index < input.length; index++){
+
+            if(input[index] == candidate)
+                count++;
+
+           if(count > input.length/2)return candidate;
+        }
+        return -1;
+    }
+
+    //it takes (o(n2)
+    public int majority(int[]input){
+
+        for(int i = 0; i < input.length; i++){
+
+            int count = 1;
+            for(int j = i+1; j < input.length; j++){
+
+                if(input[i]==input[j])
+                    count++;
+                if(count > input.length/2)
+                    return input[i];
+            }
+        }
+        return -1;
+    }
+
     public void maxGroupFlip(int[]input){
 
         for(int index = 1; index < input.length; index++){
@@ -1513,8 +1566,17 @@ public class January{
   //     System.out.println(res);
 
        //int[] input = {1,1,0,0,0,1};
-       int[] input = {1,0,0,0,1,0,0,1,1,1,1};
-       arrays.maxGroupFlip(input);
+      // int[] input = {1,0,0,0,1,0,0,1,1,1,1};
+       //arrays.maxGroupFlip(input);
+
+       //int[] input ={8,3,4,8,8};
+//       int[] input ={3,7,4,7,7,5};
+       //int[] input = {20,30,40,50,50,50,50};
+       int[] input = {8,8,6,6,6,4,6};
+//       int res = arrays.majority(input);
+       int res = arrays.getMajority(input);
+       System.out.println(res);
+       
     }
 
 
