@@ -4,6 +4,24 @@
 class Arrays{
 
 
+    public int maxSumSubArray(int[]input){
+
+        int res = Integer.MIN_VALUE;
+        for(int i = 0; i < input.length; i++){
+
+
+            int current_sum = 0;
+            int current_max = input[i];
+            for(int j = i; j < input.length; j++){
+
+                current_sum +=input[j];
+                current_max = java.lang.Math.max(current_sum,current_max);
+            }
+        res = java.lang.Math.max(res,current_max);
+        }
+        return res;
+    }
+
     public int maxLengthOddEven(int[]input){
 
         int res = 1;
@@ -1618,9 +1636,15 @@ public class January{
 
 //       int[] input = {0,12,14,7,8};
 //       int[] input = {7,10,13,14};
-       int[] input = {10,12,8};
-       int res = arrays.maxLengthOddEven(input);
-       System.out.println(res);
+//       int[] input = {10,12,8};
+ //      int res = arrays.maxLengthOddEven(input);
+  //     System.out.println(res);
+
+       int[] input = {2,3,-8,7,-1,2,3};
+       //int[] input = {5,8,3};
+       //int[] input = {-6,-1,-8};
+    int res = arrays.maxSumSubArray(input);
+    System.out.println(res);
     }
 
 }
