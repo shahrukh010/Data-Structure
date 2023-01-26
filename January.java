@@ -4,6 +4,25 @@
 class Arrays{
 
 
+    public int maxSumFromCurcularArray(int[]input){
+
+        int res = 0;
+
+        for(int i = 0; i < input.length; i++){
+
+            int current_sum = 0;
+            int current_max = 0;
+            for(int j = 0; j < input.length; j++){
+
+                int index = ((i+j)%input.length);
+                current_sum += input[index];
+                current_max = java.lang.Math.max(current_sum,current_max);
+            }
+            res  =java.lang.Math.max(res,current_max);
+        }
+        return res;
+    }
+
     private int getCandidate(int[]input){
 
         int candidate = input[0];
@@ -1572,11 +1591,17 @@ public class January{
        //int[] input ={8,3,4,8,8};
 //       int[] input ={3,7,4,7,7,5};
        //int[] input = {20,30,40,50,50,50,50};
-       int[] input = {8,8,6,6,6,4,6};
+//       int[] input = {8,8,6,6,6,4,6};
 //       int res = arrays.majority(input);
-       int res = arrays.getMajority(input);
-       System.out.println(res);
-       
+ //      int res = arrays.getMajority(input);
+  //     System.out.println(res);
+
+       //int[] input = {5,-2,3,4};
+       //int[] input = {2,3,-4};
+       //int[] input = {8,-4,3,-5,4};
+       int[] input = {3,-4,5,6,-8,7};
+       int res = arrays.maxSumFromCurcularArray(input);      
+           System.out.println(res);
     }
 
 
