@@ -4,6 +4,19 @@
 class Arrays{
 
 
+    public int maxLengthOddEven(int[]input){
+
+        int res = 1;
+
+        for(int i = 0; i < input.length-1; i++){
+
+            if(input[i] % 2 == 0&& input[i+1] % 2 !=0 ||
+               input[i] % 2 !=0 && input[i+1] % 2==0)
+                res++;
+        }
+        return res;
+    }
+
     public int maxSumFromCurcularArray(int[]input){
 
         int res = 0;
@@ -1599,10 +1612,15 @@ public class January{
        //int[] input = {5,-2,3,4};
        //int[] input = {2,3,-4};
        //int[] input = {8,-4,3,-5,4};
-       int[] input = {3,-4,5,6,-8,7};
-       int res = arrays.maxSumFromCurcularArray(input);      
-           System.out.println(res);
-    }
+  //     int[] input = {3,-4,5,6,-8,7};
+ //      int res = arrays.maxSumFromCurcularArray(input);      
+//           System.out.println(res);
 
+//       int[] input = {0,12,14,7,8};
+//       int[] input = {7,10,13,14};
+       int[] input = {10,12,8};
+       int res = arrays.maxLengthOddEven(input);
+       System.out.println(res);
+    }
 
 }
