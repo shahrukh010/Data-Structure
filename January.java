@@ -4,6 +4,22 @@
 class Arrays{
 
 
+    public int maxConsecutive(int[]input){
+
+        int res = 0;
+        int count = 0;
+        for(int index = 0; index < input.length; index++){
+
+            if(input[index] == 1){
+                count++;
+                res = java.lang.Math.max(res,count);
+            }
+            else
+                count = 0;
+        }
+        return res;
+    }
+
     public int maximumSubArray(int[]input){
 
         int current_sum = input[0];
@@ -1654,11 +1670,18 @@ public class January{
 
 //       int[] input = {2,3,-8,7,-1,2,3};
        //int[] input = {5,8,3};
-       int[] input = {-6,-1,-8};
+//       int[] input = {-6,-1,-8};
 //    int res = arrays.maxSumSubArray(input);
  //   System.out.println(res);
-  int res = arrays.maximumSubArray(input);
-  System.out.println(res);
+//  int res = arrays.maximumSubArray(input);
+ // System.out.println(res);
+
+//       int[] input = {0,1,1,0,1,0};
+//       int[] input = {1,1,1,1};
+//       int[] input = {0,0,0,0};
+       int[] input = {1,0,1,1,1,1,0,1,1};
+       int res = arrays.maxConsecutive(input);
+           System.out.println(res);
     }
 
 }
