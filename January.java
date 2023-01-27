@@ -3,7 +3,38 @@
 
 class Arrays{
 
+    public int stockBuySell(int[]input){
 
+        int profit = 0;
+
+        for(int index = 1; index < input.length; index++){
+
+            if(input[index] > input[index-1])
+                profit +=input[index] - input[index-1];
+        }
+        return profit;
+    }
+
+    public int trapingWater(int[]input){
+
+        int res = 0;
+        for(int index = 1; index < input.length-1; index++){
+
+            int leftMax = 0;
+
+            for(int j = 0; j <=index; j++)
+                leftMax = java.lang.Math.max(input[j],leftMax);
+
+            int rightMax = 0;
+
+            for(int j = index+1; j < input.length; j++)
+                rightMax = java.lang.Math.max(rightMax,input[j]);
+
+            res += java.lang.Math.min(leftMax,rightMax) - input[index];
+        }
+        
+        return java.lang.Math.max(res,0);
+    }
     public int maxConsecutive(int[]input){
 
         int res = 0;
@@ -1679,9 +1710,19 @@ public class January{
 //       int[] input = {0,1,1,0,1,0};
 //       int[] input = {1,1,1,1};
 //       int[] input = {0,0,0,0};
-       int[] input = {1,0,1,1,1,1,0,1,1};
-       int res = arrays.maxConsecutive(input);
-           System.out.println(res);
+//       int[] input = {1,0,1,1,1,1,0,1,1};
+//       int res = arrays.maxConsecutive(input);
+//           System.out.println(res);
+//       int[] input = {3,0,1,2,5};
+//       int[] input = {2,0,2};
+//       int[] input = {1,2,3};
+//       int[] input = {3,2,1};
+ //     int res = arrays.trapingWater(input);
+  //    System.out.println(res);
+
+       int[] input = {1,5,3,8,12};
+       int res = arrays.stockBuySell(input);
+       System.out.println(res);
     }
 
 }
