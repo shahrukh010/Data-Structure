@@ -3,6 +3,38 @@
 
 class Arrays{
 
+    public int maxDiff(int[]input){
+
+        int res = Integer.MIN_VALUE;
+        for(int index = 0; index < input.length; index++){
+
+            int current_max = Integer.MIN_VALUE;
+            for(int j = index+1; j < input.length; j++){
+
+                current_max = java.lang.Math.max(input[j] - input[index],current_max);
+                res = java.lang.Math.max(current_max,res);
+            }
+        }
+        return res;
+    }
+    public void frequencie(int[]input){
+
+        java.util.Map<Integer,Integer> freq = new java.util.HashMap<>();
+
+        for(int value : input){
+
+            if(freq.containsKey(value)){
+
+                freq.put(value,freq.get(value)+1);
+            }
+            else
+                freq.put(value,1);
+        }
+
+        for(java.util.Map.Entry<Integer,Integer> res : freq.entrySet())
+            System.out.println(res.getKey()+"--->"+res.getValue());
+    }
+    
     public int stockBuySell(int[]input){
 
         int profit = 0;
@@ -1720,8 +1752,18 @@ public class January{
  //     int res = arrays.trapingWater(input);
   //    System.out.println(res);
 
-       int[] input = {1,5,3,8,12};
-       int res = arrays.stockBuySell(input);
+//       int[] input = {1,5,3,8,12};
+ //      int res = arrays.stockBuySell(input);
+ //      System.out.println(res);
+
+//       int[] input = {10,10,10,25,30,30};
+//       arrays.frequencie(input);
+
+       int[] input = {2,3,10,6,4,8,1};
+//       int[] input = {7,9,5,6,3,2};
+//       int[] input = {10,20,30};
+//       int[] input = {30,10,8,2};
+       int res = arrays.maxDiff(input);
        System.out.println(res);
     }
 
