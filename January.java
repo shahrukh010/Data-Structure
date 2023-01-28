@@ -1,6 +1,5 @@
 
 
-
 class Arrays{
 
     public int maxDiff(int[]input){
