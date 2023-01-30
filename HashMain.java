@@ -13,6 +13,8 @@ public class HashMain{
         table.add(15);
         table.add(23);
         table.add(21);
+        table.remove(21);
+        table.remove(23);
         System.out.println(table);
 
     }
