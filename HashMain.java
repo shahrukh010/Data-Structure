@@ -15,7 +15,9 @@ public class HashMain{
         table.add(21);
         table.remove(21);
         table.remove(23);
-        System.out.println(table);
+//        System.out.println(table);
+        boolean res = table.search(20);
+        System.out.println(res);
 
     }
 

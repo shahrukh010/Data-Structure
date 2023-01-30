@@ -29,6 +29,13 @@ public class Hashtable {
         table.get(index).remove((Integer)data);//if not do type cast then it will consider as index not object
     }
 
+    public boolean search(int data){
+
+        int index = data % bucket;
+
+        return table.get(index).contains(data);
+    }
+
     List res = null;
 
     @Override
