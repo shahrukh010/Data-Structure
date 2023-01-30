@@ -31,6 +31,18 @@ public class LinkedList{
         }
     }
 
+    private int getSizeOfList(Node node){
+
+        if(node ==null)
+            return 0;
+
+        return getSizeOfList(node.next)+1;
+    }
+    public int getSizeOfList(){
+
+        return getSizeOfList(this.first);
+    }
+
     public void printNode(){
 
         Node current = this.first;

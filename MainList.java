@@ -14,8 +14,8 @@ public class MainList{
         list.add(50);
         list.add(60);
         list.add(70);
-
         list.printNode();
+        System.out.println(list.getSizeOfList());
 
     }
 }
