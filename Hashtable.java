@@ -43,6 +43,7 @@ public class Hashtable {
 
         res = new ArrayList<>();
         for(List list : table){
+            if(!list.isEmpty())
             res.add(list);
         }
         return res.toString();
