@@ -72,7 +72,7 @@ public class LinkedList{
     }
 
 
-    public Node rotateAntiClock(Node node,int k){
+    public Node rotateClockWise(Node node,int k){
 
         int size = getSizeOfList(node);
         Node lastNode = node;
