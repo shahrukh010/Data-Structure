@@ -2,7 +2,7 @@ package com.code.main.list;
 
 public class LinkedList{
 
-    class Node{
+    public class Node{
 
         private int data;//can be access from parent class class also.ie LinkedList 
         private Node next;
@@ -11,6 +11,13 @@ public class LinkedList{
             this.data = data;
         }
 
+        public int getData(){
+            return this.data;
+        }
+
+        public Node getNext(){
+            return this.next;
+        }
     }
 
     private Node first = null;
@@ -41,6 +48,47 @@ public class LinkedList{
     public int getSizeOfList(){
 
         return getSizeOfList(this.first);
+    }
+
+    public void reverse(){
+
+        Node r = null;
+        Node q = null;
+        Node p = this.first;
+
+        while(p !=null){
+
+            r = q;
+            q = p;
+            p = p.next;
+            q.next = r;
+        }
+        this.first = q;
+    }
+
+    public Node getNode(){
+
+        return this.first;
+    }
+
+
+    public Node rotateAntiClock(Node node,int k){
+
+        int size = getSizeOfList(node);
+        Node lastNode = node;
+        Node current  = null;
+
+        for(int index = 1; index < size - k;index++){
+            lastNode = lastNode.next;
+        }
+        current = lastNode.next;
+//        System.out.println(current.data);//8
+        lastNode.next = null;
+        Node res = current;
+
+        while(current.next !=null)current = current.next;
+        current.next = node;
+        return res;
     }
 
     public void printNode(){
