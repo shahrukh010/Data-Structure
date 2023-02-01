@@ -111,6 +111,17 @@ public class LinkedList{
         return res;
     }
 
+    public Node reverseRecursive(Node node){
+
+        if(node == null || node.next  == null)
+            return node;
+        
+        Node tmp = reverseRecursive(node.next);
+        node.next.next = node;
+        node.next = null;
+        return tmp;
+    }
+
     public void printNode(){
 
         Node current = this.first;

@@ -37,9 +37,14 @@ public class MainList{
         list.add(8);
         list.add(18);
         LinkedList.Node node = list.getNode();
+        
         //LinkedList.Node res = list.rotateClockWise(node,1);
         //printNode(res);
-        LinkedList.Node res = list.rotateAntiClock(node,5);
+//        LinkedList.Node res = list.rotateAntiClock(node,5);
+//        printNode(res);
+//        System.out.println();
+
+        LinkedList.Node res = list.reverseRecursive(node);
         printNode(res);
         System.out.println();
     }
