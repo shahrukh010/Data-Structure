@@ -91,6 +91,26 @@ public class LinkedList{
         return res;
     }
 
+    public Node rotateAntiClock(Node node, int k){
+
+        if(node == null || k < 0)
+            return node;
+
+        Node tmp = node;
+        k = k % getSizeOfList(node);//because of cicularly we want rotate or (simple if k is greater then size of node)
+        for(int index = 1; index < k; index++){
+
+            tmp = tmp.next;
+        }
+        Node current = tmp.next;
+//        System.out.println(current.data);
+        tmp.next = null;
+        Node res = current;
+        while(current.next !=null)current = current.next;
+        current.next =node; 
+        return res;
+    }
+
     public void printNode(){
 
         Node current = this.first;

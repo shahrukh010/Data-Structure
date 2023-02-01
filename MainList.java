@@ -37,7 +37,9 @@ public class MainList{
         list.add(8);
         list.add(18);
         LinkedList.Node node = list.getNode();
-        LinkedList.Node res = list.rotateClockWise(node,1);
+        //LinkedList.Node res = list.rotateClockWise(node,1);
+        //printNode(res);
+        LinkedList.Node res = list.rotateAntiClock(node,5);
         printNode(res);
         System.out.println();
     }
