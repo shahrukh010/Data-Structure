@@ -72,8 +72,7 @@ public class LinkedList{
         return this.first;
     }
 
-
-    public Node rotateClockWise(Node node,int k){
+public Node rotateClockWise(Node node,int k){
 
         int size = getSizeOfList(node);
         Node lastNode = node;
@@ -168,6 +167,16 @@ public class LinkedList{
         Node secondHalf = middle.next;
         middle.next = null;
         return merge(mergeSort(node),mergeSort(secondHalf));
+    }
+
+    public Node mergeList(Node a , Node b){
+
+        return merge(mergeSort(a),mergeSort(b));
+    }
+
+    public Node mergeTwoSortedList(Node a, Node b){
+
+        return merge(a,b);
     }
 
     public void printNode(){
