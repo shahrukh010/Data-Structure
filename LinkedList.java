@@ -7,6 +7,7 @@ public class LinkedList{
         private int data;//can be access from parent class class also.ie LinkedList 
         private Node next;
 
+        public Node(){}
         public Node(int data){
             this.data = data;
         }
@@ -120,6 +121,53 @@ public class LinkedList{
         node.next.next = node;
         node.next = null;
         return tmp;
+    }
+
+    public Node middleNode(Node node){
+
+        if(node == null || node.next !=null)return node;
+
+        Node a = node;
+        Node b = node.next;
+
+        while(a !=null && b.next !=null){
+
+            a = a.next;
+            b = b.next;
+        }
+        return a;
+    }
+
+    private Node merge(Node a, Node b){
+
+        Node temp = new Node();
+        Node finalList = temp;
+
+        while(a != null && b !=null){
+
+            if(a.data < b.data){
+
+                temp.next = a;
+                a = a.next;
+            }
+            else{
+                temp.next = b;
+                b = b.next;
+            }
+            temp = temp.next;
+        }
+        temp.next = (a == null) ? b:a;
+        return finalList.next;
+    }
+
+    public Node mergeSort(Node node){
+
+        if(node == null || node.next == null)return node;
+
+        Node middle = middleNode(node);
+        Node secondHalf = middle.next;
+        middle.next = null;
+        return merge(mergeSort(node),mergeSort(secondHalf));
     }
 
     public void printNode(){

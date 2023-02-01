@@ -35,7 +35,13 @@ public class MainList{
         list.add(99);
         list.add(37);
         list.add(8);
+        list.add(0);
         list.add(18);
+        list.add(18);
+        list.add(7);
+        list.add(1);
+        list.add(2);
+        list.add(0);
         LinkedList.Node node = list.getNode();
         
         //LinkedList.Node res = list.rotateClockWise(node,1);
@@ -44,8 +50,11 @@ public class MainList{
 //        printNode(res);
 //        System.out.println();
 
-        LinkedList.Node res = list.reverseRecursive(node);
+//        LinkedList.Node res = list.reverseRecursive(node);
+ //       printNode(res);
+  //      System.out.println();
+
+        LinkedList.Node res = list.mergeSort(node);
         printNode(res);
-        System.out.println();
     }
 }
