@@ -179,6 +179,28 @@ public Node rotateClockWise(Node node,int k){
         return merge(a,b);
     }
 
+
+    public Node removeDuplicateItem(Node node){
+
+        Node currentNode = mergeSort(node);
+        Node current = node;
+        Node res = current;
+        Node tmp = node.next;
+        while(tmp !=null){
+
+            if(tmp.data !=current.data){
+
+                current.next = tmp;
+                current = current.next;
+                tmp = tmp.next;
+            }
+            else{
+                tmp = tmp.next;
+            }
+        }
+        return res;
+    }
+
     public void printNode(){
 
         Node current = this.first;
