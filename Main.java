@@ -186,6 +186,8 @@ public class Main{
 
   //          boolean result = array.equilibriumPoint(input);
             int[] input = {10,20,15,2,23,90,67};
+            int[] input = {10,20,15,2,23,90,67
+
     }
 
 }
