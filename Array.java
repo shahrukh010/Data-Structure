@@ -547,5 +547,9 @@ public class Array{
 
     }
 
+	public void setZero(int[][]matrix){
+
+	}
+
 }
 
