@@ -185,9 +185,16 @@ public class Main{
    //         int[] input = {4,2,2};
 
   //          boolean result = array.equilibriumPoint(input);
-            int[] input = {10,20,15,2,23,90,67};
-            int[] input = {10,20,15,2,23,90,67
+//            int[] input = {10,20,15,2,23,90,67};
+ //           int[] input = {10,20,15,2,23,90,67
 
+
+
+	    int[][] matrix = {{1,1,1},{1,0,1},{1,1,1}};
+	    array.setZero(matrix);
+	    for(int index = 0; index < matrix.length; index++){
+		    System.out.println(java.util.Arrays.toString(matrix[index]));
+	    }
     }
 
 }
