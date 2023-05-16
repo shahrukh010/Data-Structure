@@ -190,7 +190,8 @@ public class Main{
 
 
 
-	    int[][] matrix = {{1,1,1},{1,0,1},{1,1,1}};
+	    //int[][] matrix = {{1,1,1},{1,0,1},{1,1,1}};
+	    int[][] matrix = {{0,1,2,3},{3,4,5,2},{1,3,1,5}};
 	    array.setZero(matrix);
 	    for(int index = 0; index < matrix.length; index++){
 		    System.out.println(java.util.Arrays.toString(matrix[index]));
